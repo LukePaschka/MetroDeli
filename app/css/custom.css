@@ -4,3 +4,333 @@ Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
 */
+.jumbotron {margin:0 0 -45px;}
+.dropdown-mega {display: none;}
+
+
+.jumbotron h2 img{
+max-height: 250px;
+}
+.table{
+    background-color: #000000;
+    border-radius: 0px;
+}
+.nav a{
+   color: #000000
+}
+.nav ul{
+   background-color: #000000;
+}
+.panel-nav ul li ul li a{
+    color: #FFFFFF;
+}
+.text-primary{
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.text-info{
+    color:#C6DB4E;
+}
+.panel-lineitem a:hover{
+    background-color: transparent;
+}
+.panel-product-list ul li.inline h3{
+height: 50px;
+margin: 0px 0px 15px;
+}
+.panel-product-list ul li.inline p{
+height: 0px;
+font-size: 11px;
+}
+.homeMessage{
+    color: #000000;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+body h2{
+background-color: #000000;
+color: #FFFFFF;
+}
+.processPanel .panel-body h3{
+background-color: #000000;
+color: #C6DB4E;
+font-size: 24px;
+}
+.panel-body h3{
+background-color: #000000;
+color: #C6DB4E;
+font-size: 14px;
+}
+.panel-body h3 small{
+background-color: #000000;
+color: #FFFFFF;
+}
+.navbar .container .navbar-nav.pull-right li a i:first-of-type{border-color:#000000;}
+.fa-arrow-left{color:#000000 !important;}
+.fa-arrow-left:hover {color:#FFFFFF !important;}
+.form-control{
+    border-radius: 0px;
+}
+.input-group {
+    border-radius: 0px;
+}
+.panel-lineitem .quantity-total{
+    background-color: #000000;
+}
+.list-group-item:first-child{
+    border-radius: 0px;
+}
+.list-group-item{
+    background-color: #000000;
+}
+.btn{
+    border-radius: 0px;
+}
+.dropdown-menu{
+    top: 59px;
+    border-radius: 0px;
+}
+.dropdown ul {
+    background-color: #FFFFFF;
+}
+.nav .well{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.panel-category-list .well{
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+}
+.panel-category-list .well h5{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.panel{
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+.quantity-total text-center{
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+.panel-nav ul li.active{
+    background-color: #000000;
+}
+.panel panel-body{
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+.panel a{
+    color: #C6DB4E;
+}
+.panel .panel-heading{
+    border: none;
+}
+.panel-default .panel-heading .panel-title{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.panel-primary .panel-heading .panel-title{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+.panel .panel-heading .panel-title{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 32px;
+}
+.panel .panel-footer{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
+
+.container,
+.container-view {
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 5px;
+     padding-right: 5px;
+}
+@media(min-width: 250px){
+    .nav{
+         font-size: 12px;
+    }
+    iframe{
+     width: 250px; 
+     height: 141px;
+     }
+}
+@media (min-width: 768px){
+    .container,
+    .container-view{
+            width: 730px;
+     }
+    .nav{
+         font-size: 14px;
+    }
+    iframe{
+     width: 560px; 
+     height: 315px;
+     }
+}
+@media (min-width: 992px){
+    .container,
+    .container-view{
+           width: 950px;
+     }
+    iframe{
+     width: 560px; 
+     height: 315px;
+     }
+}
+@media (min-width: 1200px) {
+    .container,
+    .container-view {
+          width: 1150px;
+     }
+    iframe{
+     width: 560px; 
+     height: 315px;
+     }
+}
+.dropdown-mega{
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+    max-width: 100%;
+}
+.dropdown-mega > a i{
+    color: #C6DE53;
+}
+.dropdown-mega .nav ul {
+    background-color: #FFF;
+    color: #000;
+    border-color: #000000;
+    max-width: 100%;
+}
+.jumbotron{
+    background-color:  transparent;
+}
+.navbar-nav > li > a > dropdown{
+    top: 10px;
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{
+background-color: #000;
+border-color: #000;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+background-color: #C6DE53 !important; 
+color: #000; 
+border-color: #C6DE53 !important; 
+}
+
+.pagination > li > a, .pagination > li > span{
+background-color: #000;
+border-color: #000;
+color: #fff;
+}
+
+.pagination > li > a, .pagination > li > span:hover{
+background-color: #000;
+border-color: #000;
+color: #fff;
+}
+
+.thumbnail .caption{
+color: #fff
+}
+
+.thumbnail img{
+max-height: 140px;
+width: auto;
+}
+
+.panel-product-list .well{
+min-height: 360px;
+}
+
+.navbar-inverse {
+  margin: 10px 0 15px;
+}
+@media (min-width: 768px) {
+  .navbar-inverse {
+    margin: 0 0 50px;
+  }
+}
+.navbar-inverse.navbar {
+  min-height: none;
+  padding: 10px 5px;
+}
+.navbar-inverse .navbar-nav > li {
+  padding: 0 6px 0 5px;
+}
+.navbar-inverse .navbar-nav > li:not(:first-of-type) {
+  padding: 0 6px;
+  border-left: 1px solid #4b5b58;
+}
+.navbar-inverse .navbar-nav > li > a {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+@media (max-width: 991px) {
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: 0.8em;
+  }
+}
+.navbar-inverse .non-catalog > li:nth-of-type(2) {
+  padding: 0 6px 0 5px;
+  border-left: none;
+}
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav li {
+    height: 36px;
+    overflow: hidden;
+    -webkit-transition: height 300ms ease-in-out;
+    transition: height 300ms ease-in-out;
+  }
+  .navbar-inverse .navbar-nav li:not(:first-of-type) {
+    border-left: none;
+  }
+  .navbar-inverse .navbar-nav li:not(:first-of-type):not(.active) {
+    margin-top: 1px;
+  }
+  .navbar-inverse .navbar-nav:not(.hidingDisabled) li:not(.active) {
+    height: 0px;
+    margin-top: 0;
+  }
+  .navbar-inverse .navbar-nav.navbar-right {
+    margin-bottom: 0;
+    float: right;
+  }
+  .navbar-inverse .navbar-nav.navbar-right li:not(.active) {
+    height: 36px;
+  }
+}
+
+.navbar-inverse
+.navbar-nav > li > a {
+ line-height: 50%;
+ padding-bottom: 9px;
+ padding-top: 16px;
+}
+
+.navbar-nav li > a{
+height: 40px;
+}
+
+footer { 
+    display: block;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+color: #ffffff;
+}
