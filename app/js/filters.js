@@ -111,3 +111,34 @@ four51.app.filter('metrodeliorderfields', function() {
         return result;
     }
 });
+
+four51.app.filter('metrodeliprojectrequestfields', function() {
+    return function(field) {
+        var result = field;
+
+        var fieldNames = {
+            "SiteName": "Site Name",
+            "USFoodsNum": "US Foods Customer Number",
+            "Division": "US Foods Division Name",
+            "SiteAddress": "Site Address",
+            "SiteContName": "Site Contact Name",
+            "SiteEmail": "Site Contact Email",
+            "SitePhone": "Site Contact Phone",
+            "USFoodSalesRep": "US Food Sales Representative",
+            "USFoodSalesEmail": "US Foods Sales Representative Email",
+            "USFoodSalesPhone": "US Foods Sales Representative Phone",
+            "USFoodVPDivision": "US Foods Division VP of Sales",
+            "USFoodVPEmail": "US Foods Division VP of Sales Email",
+            "SurveyDate": "Survey Target Date",
+            "InstallDate": "Install Target Date"
+        };
+
+        if (fieldNames[field]) {
+            result = fieldNames[field];
+        }
+
+        return result;
+    }
+});
+
+
