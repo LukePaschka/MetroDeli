@@ -14,7 +14,7 @@
     <link href='//fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/animate.min.css" />
 </head>
-<body ng-cloak ng-class="ng-cloak" style="background-image: url('{{user.CustomFields[0].File.Url}}');">
+<body ng-cloak ng-class="ng-cloak" style="background-image: url('css/images/bigbrickWall.jpg');">
 <section>
     <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
         <login />
@@ -36,8 +36,8 @@
         </br>
         <section class="container">
             <div style="color: #000B15" class="panel">
-                <a title="Licencing Agreement" target="_blank" href="{{user.CustomFields[2].File.Url}}">
-                    <img align="left" ng-src="{{user.CustomFields[1].File.Url}}">
+                <a title="Licencing Agreement" target="_blank" href="lib/assets/MDLicensingAgreement.pdf">
+                    <img align="left" src="css/images/document.png">
                     <p>Licensing Agreement</p>
                     <p>Stipulates the terms and conditions of the Metro Deli retail program. Must be executed by the customer.</p>
                 </a>
