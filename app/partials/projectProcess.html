@@ -1,0 +1,67 @@
+<script>
+    function ProcessCtrl($scope) {
+        $scope.processStep = 0;
+        $scope.toggleStep = function(step) {
+            if ($scope.processStep == step) {
+                $scope.processStep = 0;
+            } else {
+                $scope.processStep = step;
+            }
+        }
+    };
+</script>
+
+<div class="panel panel-default" ng-controller="ProcessCtrl">
+    <div class="panel-heading">
+        <h3 class='panel-title'>Project Request Process</h3>
+    </div>
+    <div class="panel-body project-process">
+        <h3 ng-click="toggleStep(1)" ng-class="{open: processStep == 1}">Step 1<p>Project Request</p></h3>
+        <div collapse="processStep != 1">
+            <ul>
+                <li><i class="fa fa-check"></i> Complete the “Project Request” to get started.</li>
+                <li><i class="fa fa-check"></i> After you submit the “Project Request” we will contact you to set up a time and date that works best for your schedule.</li>
+                <li><i class="fa fa-check"></i> Once the “Site Survey” appointment is confirmed, your DIVISION will be charged the $500.00 project fee.</li>
+                <li><i class="fa fa-check"></i> If you have specific requests or notes, be sure to mention this in the “Notes” section on the site survey request form.</li>
+            </ul>
+        </div>
+        <h3 ng-click="toggleStep(2)" ng-class="{open: processStep == 2}">Step 2<p>Estimate</p></h3>
+        <div collapse="processStep != 2">
+            <ul>
+                <li><i class="fa fa-check"></i> We compile and process the information gathered from the site survey to generate an estimate and conceptual idea of how your space will be transformed into a Metro Deli location.</li>
+
+            </ul>
+        </div>
+        <h3 ng-click="toggleStep(3)" ng-class="{open: processStep == 3}">Step 3<p>Approval to Proceed with Design</p></h3>
+        <div collapse="processStep != 3">
+            <ul>
+                <li><i class="fa fa-check"></i> Using the pictures, measurements and any specific notes or requests from the site survey, we present you with an estimate and conceptual idea of how your space will be transformed into a Metro Deli location.</li>
+                <li><i class="fa fa-check"></i> After the approval is confirmed, you can select the menu programs for the establishment and submit the Custom Menu Order form for processing. Allow up to 10 business days to receive your order. The DIVISION will be billed at the time of order placement.</li>
+            </ul>
+        </div>
+        <h3 ng-click="toggleStep(4)" ng-class="{open: processStep == 4}">Step 4<p>Design/Install</p></h3>
+        <div collapse="processStep != 4">
+            <ul>
+                <li><i class="fa fa-check"></i> Each Metro Deli space is unique and because of this all designs are custom, giving you a unique look that will be unlike any other space. Each Metro Deli location is expertly designed in accordance with the Metro Deli brand guidelines. Using the photos taken at the site survey, we digitally mock up the pictures showing you how your space will be transformed into a Metro Deli location.</li>
+                <li><i class="fa fa-check"></i> Digital mockups are presented to you for approval to ensure it is exactly what you are looking for.</li>
+                <li><i class="fa fa-check"></i> If you want to add any additional items such as easels or apparel, please see our “Merchandise / Menus” tab.</li>
+                <li><i class="fa fa-check"></i> At this time Merchandising will work with you to schedule a firm installation date, so we can ensure our professional installers will be available for the date and time you would like the installation to take place.</li>
+            </ul>
+        </div>
+        <h3 ng-click="toggleStep(5)" ng-class="{open: processStep == 5}">Step 5<p>Print</p></h3>
+        <div collapse="processStep != 5">
+            <ul>
+                <li><i class="fa fa-check"></i> Once we have established a firm installation date and have an approval on the digital mockups, your custom designs are expertly printed, carefully packaged and shipped to our professional installers.</li>
+            </ul>
+        </div>
+        <h3 ng-click="toggleStep(6)" ng-class="{open: processStep == 6}">Step 6<p>Install</p></h3>
+        <div collapse="processStep != 6">
+            <ul>
+                <li><i class="fa fa-check"></i> Prior to the installation, our professional installers contact you directly to review the time and meeting place for the installation.</li>
+                <li><i class="fa fa-check"></i> At the location our professional 3M certified installers will precisely and carefully install the graphics using 3M film and clean up any debris from the installation.</li>
+                <li><i class="fa fa-check"></i> Once complete, our professional installers will take high resolution pictures of the finished space to be presented to you, showing you before and after pictures and the transformation of your space into a Metro Deli location.</li>
+                <li><i class="fa fa-check"></i> The cost of the install will be billed to the DIVISION at completion.</li>
+            </ul>
+        </div>
+    </div>
+</div>

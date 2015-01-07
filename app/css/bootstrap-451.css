@@ -10275,6 +10275,74 @@ shortproductviewminimal .panel-order-shipping-multiple > div {
   max-width: 100%;
   margin: 0 0 0 auto;
 }
+.project-process h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 5px 5px 1px;
+}
+.project-process h3 p {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 0.5em;
+  color: #cade38;
+}
+.project-process h3.open {
+  color: #000;
+  background-color: #cade38;
+}
+.project-process h3.open p {
+  color: #000;
+}
+.project-process i {
+  color: #cade38;
+}
+.project-process > div {
+  border: 1px solid #fff;
+}
+.project-process > div ul {
+  padding: 20px;
+}
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid,
+input.ng-invalid:invalid,
+textarea.ng-invalid:invalid,
+select.ng-invalid:invalid {
+  border-color: #cccccc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #cccccc;
+}
+input.ng-invalid:focus,
+textarea.ng-invalid:focus,
+select.ng-invalid:focus,
+input.ng-invalid:invalid:focus,
+textarea.ng-invalid:invalid:focus,
+select.ng-invalid:invalid:focus,
+input.ng-invalid.ng-invalid:focus,
+textarea.ng-invalid.ng-invalid:focus,
+select.ng-invalid.ng-invalid:focus,
+input.ng-invalid:invalid.ng-invalid:focus,
+textarea.ng-invalid:invalid.ng-invalid:focus,
+select.ng-invalid:invalid.ng-invalid:focus,
+input.ng-invalid:invalid:focus,
+textarea.ng-invalid:invalid:focus,
+select.ng-invalid:invalid:focus,
+input.ng-invalid:invalid:invalid:focus,
+textarea.ng-invalid:invalid:invalid:focus,
+select.ng-invalid:invalid:invalid:focus {
+  border-color: #66afe9;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #cccccc;
+}
+label {
+  display: block;
+}
+label.required {
+  color: #fff;
+}
 .home-view {
   padding-bottom: 20px;
   color: #fff;
