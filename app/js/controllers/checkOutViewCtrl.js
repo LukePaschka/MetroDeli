@@ -111,4 +111,32 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
 	$scope.cancelEdit = function() {
 		$location.path('order');
 	};
+
+    function validCostCenter(value) {
+        var valid = false;
+        angular.forEach($scope.user.CostCenters, function(cc) {
+            if (cc.Name == value) {
+                valid = true;
+            }
+        });
+        return valid;
+    }
+
+    $scope.metroDeliCostCenter = null;
+    $scope.$watch('metroDeliCostCenter', function() {
+        if ($scope.metroDeliCostCenter) {
+            if (validCostCenter($scope.metroDeliCostCenter)) {
+                $scope.currentOrder.CostCenter = $scope.metroDeliCostCenter;
+                $scope.cart_order.$setValidity('CostCenter', true);
+            }
+            else {
+                $scope.currentOrder.CostCenter = null;
+                $scope.cart_order.$setValidity('CostCenter', false);
+            }
+        }
+        else {
+            $scope.cart_order.$setValidity('CostCenter', true);
+        }
+    }, true);
+
 }]);

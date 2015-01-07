@@ -1,0 +1,23 @@
+<div class="panel panel-default" ng-show="StaticSpecGroups">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{'Gallery' | r | xlat}}
+        </h3>
+        <h4 class="panel-title">
+            {{LineItem.Product.Description}}
+        </h4>
+    </div>
+    <div class="panel-body" ng-repeat="sg in StaticSpecGroups.EvenSpecGroups" ng-show="StaticSpecGroups.EvenSpecGroups">
+        <div class="col-md-6" ng-repeat="s in sg.Specs">
+            <ul class="list-group" >
+                <li>
+                    <a style="display: block" href="{{s.FileURL}}">
+                        <figure ng-show="s.VisibleToCustomer" >
+                            <img class="image-responsive" style="max-width:100%; height:auto" ng-src="{{s.FileURL}}">
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

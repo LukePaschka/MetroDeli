@@ -4,35 +4,73 @@
 
 
 //== Colors
-
+@md-green:#CADE38;
+@brand-primary:@md-green;
+@brand-info:#5BC0DE;
+@brand-success:#8FA13C;
+@brand-warning:#f0ad4e;
+@brand-danger:#990000;
 //== Scaffolding
 
 //== Typography
-
+@permanent-marker: 'Permanent Marker', cursive;
+@pathway-gothic-one: 'Pathway Gothic One', sans-serif;
+@text-color:#fff;
+@link-color: @md-green;
+@link-hover-color: #fff;
 //== Components
 
 //== Tables
 
 //== Buttons
-
+@btn-primary-color:#000;
+@btn-default-color:#fff;
+@btn-default-bg:@gray;
+@btn-default-border:darken(@gray,5);
 //== Forms
 
 //== Dropdowns
-
+@dropdown-bg: #000;
+@dropdown-link-color:#fff;
+@dropdown-link-hover-bg: @md-green;
+@dropdown-link-hover-color: #000;
 //== Media queries breakpoints
 
 //== Grid system
 
 //== Container sizes
-
+@container-tablet:        (720px + @grid-gutter-width);
+@container-desktop:       (940px + @grid-gutter-width);
+@container-large-desktop: (1140px + @grid-gutter-width);
 //== Navbar
-
+@navbar-default-bg: #000;
+@navbar-default-link-color:         #fff;
+@navbar-default-link-hover-color:   @md-green;
+@navbar-default-link-active-color:  @md-green;
+@navbar-inverse-bg: @md-green;
+@navbar-inverse-link-color:         #000;
+@navbar-inverse-link-hover-color:   #fff;
+@navbar-inverse-link-active-color:  #fff;
 //== Navs
 
 //== Pills
 
 //== Pagination
+@pagination-color:                     @btn-default-color;
+@pagination-bg:                        @btn-default-bg;
+@pagination-border:                    @btn-default-border;
 
+@pagination-hover-color:               @btn-default-color;
+@pagination-hover-bg:                  darken(@btn-default-bg,15);
+@pagination-hover-border:              darken(@btn-default-border, 15);
+
+@pagination-active-color:              #000;
+@pagination-active-bg:                 @md-green;
+@pagination-active-border:             darken(@md-green,5);
+
+@pagination-disabled-color:            @btn-default-color;
+@pagination-disabled-bg:               darken(@btn-default-bg,15);;
+@pagination-disabled-border:           darken(@btn-default-border, 15);
 //== Pager
 
 //== Jumbotron
@@ -52,13 +90,19 @@
 //== Progress bars
 
 //== List group
-
+@list-group-bg:transparent;
 //== Panels
-
+@panel-bg: #000;
+@panel-default-heading-bg: #000;
+@panel-footer-bg: #000;
+@panel-default-text:#fff;
+@panel-default-border:#000;
+@panel-inner-border:#000;
 //== Thumbnails
 
 //== Wells
-
+@well-bg:#000;
+@well-border:#000;
 //== Badges
 
 //== Breadcrumbs
@@ -72,7 +116,10 @@
 //== Type
 
 //== Miscellaneous
-
+@border-radius-base:0;
+@border-radius-large:0;
+@border-radius-small:0;
+@input-border-radius:0;
 
 //
 // Custom variables ** 451
