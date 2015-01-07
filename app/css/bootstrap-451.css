@@ -268,7 +268,7 @@ body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #ffffff;
   background-color: #f0f0f0;
 }
 input,
@@ -1920,7 +1920,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2014,7 +2014,7 @@ select[multiple].input-lg {
 }
 .btn:hover,
 .btn:focus {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 .btn:active,
@@ -2035,18 +2035,18 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  color: #ffffff;
+  background-color: #555555;
+  border-color: #494949;
 }
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #ebebeb;
-  border-color: #adadad;
+  color: #ffffff;
+  background-color: #414141;
+  border-color: #2a2a2a;
 }
 .btn-default:active,
 .btn-default.active,
@@ -2068,12 +2068,12 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
+  background-color: #555555;
+  border-color: #494949;
 }
 .btn-default .badge {
-  color: #ffffff;
-  background-color: #333333;
+  color: #555555;
+  background-color: #ffffff;
 }
 .btn-primary {
   color: #000000;
@@ -4481,7 +4481,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #ffffff;
 }
 .alert {
   padding: 15px;
@@ -6966,7 +6966,7 @@ select.ng-invalid:invalid:invalid:focus {
 }
 .panel-nav ul li ul li a {
   font-weight: inherit;
-  color: #333333;
+  color: #ffffff;
 }
 .panel-nav ul li ul li li {
   padding-left: 25px;
@@ -10193,6 +10193,14 @@ table[datepicker] {
 }
 .badge {
   color: #000;
+}
+.navbar-fixed-bottom.container,
+.navbar-fixed-bottom.container-view {
+  padding: 0;
+}
+.navbar-fixed-bottom.container .badge,
+.navbar-fixed-bottom.container-view .badge {
+  color: #fff;
 }
 .nav.nav-tabs > li.active > a {
   background-color: #cade38;

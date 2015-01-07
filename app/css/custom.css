@@ -138,28 +138,6 @@ color: #FFFFFF;
     color: #FFFFFF;
 }
 
-.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{
-background-color: #000;
-border-color: #000;
-}
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-background-color: #C6DE53 !important; 
-color: #000; 
-border-color: #C6DE53 !important; 
-}
-
-.pagination > li > a, .pagination > li > span{
-background-color: #000;
-border-color: #000;
-color: #fff;
-}
-
-.pagination > li > a, .pagination > li > span:hover{
-background-color: #000;
-border-color: #000;
-color: #fff;
-}
-
 .thumbnail .caption{
 color: #fff
 }
