@@ -134,6 +134,9 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
                 $scope.cart_order.$setValidity('CostCenter', false);
             }
         }
+        else {
+            $scope.cart_order.$setValidity('CostCenter', true);
+        }
     }, true);
 
 }]);
