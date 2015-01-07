@@ -1,6 +1,3 @@
-/**
- * Created by Connor on 12/15/2014.
- */
 four51.app.controller('ProjectRequestCtrl', ['$scope', '$routeParams', '$451', 'Email', function($scope, $routeParams, $451, Email) {
     $scope.Divisions = ["Bismarck_3J",
         "Chicago_3Y",
@@ -66,9 +63,48 @@ four51.app.controller('ProjectRequestCtrl', ['$scope', '$routeParams', '$451', '
         "Swedesboro_2Z",
         "Pittston_2N"
     ];
-    $scope.EmailDetails = {};
+
+    $scope.EmailDetails = {
+        SiteName:"",
+        USFoodsNum:"",
+        Division:"",
+        SiteAddress:"",
+        SiteContName:"",
+        SiteEmail:"",
+        SitePhone:"",
+        USFoodSalesRep:"",
+        USFoodSalesEmail:"",
+        USFoodSalesPhone:"",
+        USFoodVPDivision:"",
+        USFoodVPEmail:"",
+        SurveyDate:"",
+        InstallDate:"",
+        AdditionalComments:""
+    };
+
+    function validForm(emailDetails) {
+        var result = {Valid:true, Errors:[]};
+
+        angular.forEach(emailDetails, function(value, key) {
+            if (key != 'AdditionalComments' && !value) {
+                result.Valid = false;
+                result.Errors.push(key);
+            }
+        });
+
+        return result;
+    }
+
+    $scope.formErrors = [];
     $scope.emailSend = function(emailDetails) {
-        Email.send(emailDetails);
-        $scope.emailSent = true;
+        $scope.formErrors = [];
+        var result = validForm(emailDetails);
+        if (result.Valid) {
+            Email.send(emailDetails);
+            $scope.emailSent = true;
+        }
+        else {
+            $scope.formErrors = result.Errors;
+        }
     };
 }]);
