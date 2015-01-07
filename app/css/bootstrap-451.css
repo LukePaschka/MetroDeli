@@ -10183,3 +10183,19 @@ table[datepicker] {
 .fa-bomb:before {
   content: "\f1e2";
 }
+.container-view {
+  background-color: #000;
+}
+.home-view {
+  color: #fff;
+}
+.home-view img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.home-view h3 {
+  font-weight: bold;
+}
+.home-view > div > .row {
+  margin-bottom: 15px;
+}
