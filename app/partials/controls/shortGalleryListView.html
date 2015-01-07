@@ -1,4 +1,9 @@
 <div class="451qa_prod_item row wellAdjusted">
+    <div class="col-xs-12 text-left">
+        <div class="panel-body">
+            <h3 class="text-center">{{LineItem.Product.ExternalID}}</h3>
+        </div>
+    </div>
     <div class="col-xs-12 text-center">
         <a class="thumbnail" href="product/{{LineItem.Product.InteropID}}">
             <figure ng-show="LineItem.Variant.SmallImageUrl || LineItem.Product.SmallImageUrl" >
