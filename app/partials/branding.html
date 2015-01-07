@@ -1,9 +1,22 @@
-<section class="jumbotron" ng-class="{'active': isActive('catalog')}" ng-show="user.Company.LogoUrl">
-    <div class="container">
-        <h2 class="thumbnail" ng-show="Four51User.isAuthenticated()">
-            <a ng-click="refreshUser()" href="home">
-                <img src="css/images/logo.png" />
+<section class="branding-view container">
+    <div class="row">
+        <div class="col-sm-4 col-md-2">
+            <a ng-click="refreshUser()" href="home" class="logo-image hidden-xs">
+                <figure>
+                    <img src="css/images/logo.png" />
+                </figure>
             </a>
-        </h2>
+            <a ng-click="refreshUser()" href="home" class="logo-image visible-xs">
+                <figure>
+                    <img src="css/images/logoBig.png" />
+                </figure>
+            </a>
+        </div>
+        <div class="col-sm-8 col-md-10">
+            <figure class="header-image hidden-xs">
+                <img src="css/images/headerImage.jpg"/>
+            </figure>
+            <second-nav></second-nav>
+        </div>
     </div>
 </section>
