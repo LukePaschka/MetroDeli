@@ -111,4 +111,28 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
 	$scope.cancelEdit = function() {
 		$location.path('order');
 	};
+
+    function validCostCenter(value) {
+        var valid = false;
+        angular.forEach($scope.user.CostCenters, function(cc) {
+            if (cc.Name == value) {
+                valid = true;
+            }
+        });
+        return valid;
+    }
+
+    $scope.$watch('currentOrder.OrderFields', function() {
+        if ($scope.currentOrder && $filter('getfieldbyname')($scope.currentOrder.OrderFields, 'Metro Deli Cost Center')) {
+            var value = $filter('getfieldbyname')($scope.currentOrder.OrderFields, 'Metro Deli Cost Center').Value;
+            console.log(value);
+            if (value && validCostCenter(value)) {
+                console.log('in array!');
+            }
+            else if (value) {
+                console.log('not in array');
+            }
+        }
+    }, true);
+
 }]);
