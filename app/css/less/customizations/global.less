@@ -3,6 +3,43 @@
   background-color:#000;
 }
 
+.panel .panel-heading .panel-title {
+  font-family: @permanent-marker;
+  text-transform: none;
+}
+
+.nav.nav-tabs {
+  & > li {
+    &.active {
+      & > a {
+        background-color: @md-green;
+        color:#000;
+        border-color:darken(@md-green, 5);
+      }
+    }
+    &:hover,
+    &:focus {
+      & > a {
+        color:#000;
+        background-color: fade(@md-green, 60);
+        border-color:fade(darken(@md-green, 5), 60);
+
+      }
+    }
+    & > a {
+      color:@md-green;
+    }
+  }
+}
+
+.tab-pane {
+  color:#fff;
+  .list-group,
+  .list-group-item{
+    border:none;
+  }
+}
+
 .navbar .container .navbar-nav.pull-left li.fadeInLeft a i,
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
   color:#fff;

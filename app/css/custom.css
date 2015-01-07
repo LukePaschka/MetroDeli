@@ -127,12 +127,10 @@ color: #FFFFFF;
 .panel-primary .panel-heading .panel-title{
     background-color: #000000;
     color: #FFFFFF;
-    font-family: 'Pathway Gothic One', sans-serif;
 }
 .panel .panel-heading .panel-title{
     background-color: #000000;
     color: #FFFFFF;
-    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 32px;
 }
 .panel .panel-footer{
@@ -177,8 +175,4 @@ min-height: 360px;
 
 footer { 
     display: block;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
-color: #ffffff;
 }

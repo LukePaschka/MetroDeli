@@ -10187,6 +10187,31 @@ table[datepicker] {
   margin-top: 0;
   background-color: #000;
 }
+.panel .panel-heading .panel-title {
+  font-family: 'Permanent Marker', cursive;
+  text-transform: none;
+}
+.nav.nav-tabs > li.active > a {
+  background-color: #cade38;
+  color: #000;
+  border-color: #c3d924;
+}
+.nav.nav-tabs > li:hover > a,
+.nav.nav-tabs > li:focus > a {
+  color: #000;
+  background-color: rgba(202, 222, 56, 0.6);
+  border-color: rgba(195, 217, 36, 0.6);
+}
+.nav.nav-tabs > li > a {
+  color: #cade38;
+}
+.tab-pane {
+  color: #fff;
+}
+.tab-pane .list-group,
+.tab-pane .list-group-item {
+  border: none;
+}
 .navbar .container .navbar-nav.pull-left li.fadeInLeft a i,
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i,
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
