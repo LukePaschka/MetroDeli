@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-fixed-bottom">
+            <div class="navbar-fixed-bottom container">
                 <div class="alert-warning text-center" style="padding: 10px;" ng-if="currentOrder.RepeatError">
                     {{'Some items were not added to your repeat order' | r | xlat}}: {{currentOrder.RepeatError}}
                 </div>
@@ -204,7 +204,7 @@
                         </button>
                     </li>
                     <li>
-                        <button type="submit" class="btn btn-primary" ng-click="saveChanges()">
+                        <button type="submit" class="btn btn-default" ng-click="saveChanges()">
                             <loadingindicator  ng-show="displayLoadingIndicator" />
                             <small>{{('Save' | r) + ' ' + ('Order' | r) | xlat}}</small>
                         </button>
