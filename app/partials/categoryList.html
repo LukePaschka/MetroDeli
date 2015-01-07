@@ -13,7 +13,7 @@
         <nav class="nav 451_lbl_subcatlist">
             <ul>
                 <li class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-repeat="c in currentCategory.SubCategories">
-                    <div class="well">
+                    <div ng-show="c.Name != 'Picture Gallery'" class="well">
                         <a ng-href="catalog/{{c.InteropID}}">
                             <figure ng-show="c.Image.URL">
                                 <img class="img-responsive" ng-src="{{c.Image.URL}}"/>
