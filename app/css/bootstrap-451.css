@@ -280,12 +280,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #1a1a1a;
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #000000;
+  color: #cade38;
   text-decoration: underline;
 }
 a:focus {
@@ -2281,7 +2281,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #1a1a1a;
+  color: #ffffff;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2302,7 +2302,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #000000;
+  color: #cade38;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3496,7 +3496,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #1a1a1a;
+  border-color: #ffffff;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4199,7 +4199,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #1a1a1a;
+  color: #ffffff;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4219,7 +4219,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #000000;
+  color: #cade38;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4414,7 +4414,7 @@ a.badge:focus {
 }
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #1a1a1a;
+  color: #ffffff;
   background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
@@ -4477,7 +4477,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #1a1a1a;
+  border-color: #ffffff;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -10192,6 +10192,16 @@ table[datepicker] {
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
   color: #fff;
 }
+.license-agreement > div {
+  padding: 15px;
+  background-color: #000;
+}
+.license-agreement > div a {
+  display: block;
+}
+.license-agreement > div img {
+  float: left;
+}
 .branding-view {
   background-color: #cade38;
 }
@@ -10210,6 +10220,7 @@ table[datepicker] {
   margin: 0 0 0 auto;
 }
 .home-view {
+  padding-bottom: 20px;
   color: #fff;
 }
 .home-view img {
