@@ -24,12 +24,13 @@
                     <li class="text-center">
                         <span class="badge">
                             <i class="fa fa-exclamation-circle fa-inverse"></i>
-                            {{cart_order.$error.required.length + cart_billing.$error.required.length + cart_shipping.$error.required.length + cart_billing.$error.paymentMethod.length}}
+                            {{cart_order.$error.required.length + cart_billing.$error.required.length + cart_shipping.$error.required.length + cart_billing.$error.paymentMethod.length + (metroDeliCostCenter && !currentOrder.CostCenter ? 1 : 0)}}
                         </span>
                     </li>
                     <li class="text-center">
                         <ul ng-class="{'one': errorSection == 'open', 'two': errorSection == '' }">
                             <li ng-if="cart_order.orderid.$invalid">{{'Enter an ' + ('order' | r) + ' ' + ('ID' | r) | xlat}}</li>
+                            <li ng-if="metroDeliCostCenter && !currentOrder.CostCenter">{{'Please enter a valid ' + ('Cost Center' | r) | xlat}}</li>
                             <li ng-if="cart_shipping.shippingAddress.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             <li ng-if="cart_shipping.shippingAddressLineItem.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             <li ng-if="cart_shipping.shipMethod.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Method' | rl) | xlat}}</li>

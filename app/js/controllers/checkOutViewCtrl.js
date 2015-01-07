@@ -122,15 +122,16 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
         return valid;
     }
 
-    $scope.$watch('currentOrder.OrderFields', function() {
-        if ($scope.currentOrder && $filter('getfieldbyname')($scope.currentOrder.OrderFields, 'Metro Deli Cost Center')) {
-            var value = $filter('getfieldbyname')($scope.currentOrder.OrderFields, 'Metro Deli Cost Center').Value;
-            console.log(value);
-            if (value && validCostCenter(value)) {
-                console.log('in array!');
+    $scope.metroDeliCostCenter = null;
+    $scope.$watch('metroDeliCostCenter', function() {
+        if ($scope.metroDeliCostCenter) {
+            if (validCostCenter($scope.metroDeliCostCenter)) {
+                $scope.currentOrder.CostCenter = $scope.metroDeliCostCenter;
+                $scope.cart_order.$setValidity('CostCenter', true);
             }
-            else if (value) {
-                console.log('not in array');
+            else {
+                $scope.currentOrder.CostCenter = null;
+                $scope.cart_order.$setValidity('CostCenter', false);
             }
         }
     }, true);
