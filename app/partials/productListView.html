@@ -13,7 +13,7 @@
             </div>
         </div>
         <ul>
-            <li class="inline minimal" id="451_lst_prod" ng-repeat="product in products | paginate:(settings.currentPage-1) * settings.pageSize | limitTo:settings.pageSize | orderBy:sorter:direction">
+            <li class="inline minimal" id="451_lst_prod" ng-repeat="product in products | paginate:(settings.currentPage-1) * settings.pageSize | limitTo:settings.pageSize | orderBy:'Name' | orderBy:sorter:direction">
                 <div class="well">
                     <shortproductviewminimal ng-show="!isInPath('PicGallery')" p="product" user="user" />
                     <short-gallery-view-minimal ng-show="isInPath('PicGallery')" p="product" user="user" />
