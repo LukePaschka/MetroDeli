@@ -15,8 +15,8 @@
 //== Typography
 @permanent-marker: 'Permanent Marker', cursive;
 @text-color:#fff;
-@link-color: #fff;
-@link-hover-color: @md-green;
+@link-color: @md-green;
+@link-hover-color: #fff;
 //== Components
 
 //== Tables
@@ -55,7 +55,21 @@
 //== Pills
 
 //== Pagination
+@pagination-color:                     @btn-default-color;
+@pagination-bg:                        @btn-default-bg;
+@pagination-border:                    @btn-default-border;
 
+@pagination-hover-color:               @btn-default-color;
+@pagination-hover-bg:                  darken(@btn-default-bg,15);
+@pagination-hover-border:              darken(@btn-default-border, 15);
+
+@pagination-active-color:              #000;
+@pagination-active-bg:                 @md-green;
+@pagination-active-border:             darken(@md-green,5);
+
+@pagination-disabled-color:            @btn-default-color;
+@pagination-disabled-bg:               darken(@btn-default-bg,15);;
+@pagination-disabled-border:           darken(@btn-default-border, 15);
 //== Pager
 
 //== Jumbotron
@@ -75,13 +89,19 @@
 //== Progress bars
 
 //== List group
-
+@list-group-bg:transparent;
 //== Panels
-
+@panel-bg: #000;
+@panel-default-heading-bg: #000;
+@panel-footer-bg: #000;
+@panel-default-text:#fff;
+@panel-default-border:#000;
+@panel-inner-border:#000;
 //== Thumbnails
 
 //== Wells
-
+@well-bg:#000;
+@well-border:#000;
 //== Badges
 
 //== Breadcrumbs
@@ -95,7 +115,10 @@
 //== Type
 
 //== Miscellaneous
-
+@border-radius-base:0;
+@border-radius-large:0;
+@border-radius-small:0;
+@input-border-radius:0;
 
 //
 // Custom variables ** 451

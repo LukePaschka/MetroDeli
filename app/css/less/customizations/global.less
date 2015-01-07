@@ -3,9 +3,35 @@
   background-color:#000;
 }
 
-.panel .panel-heading .panel-title {
-  font-family: @permanent-marker;
-  text-transform: none;
+.panel {
+  .panel-heading {
+    border:none;
+    .panel-title {
+      padding:10px 15px;
+      font-family: @permanent-marker;
+      text-transform: none;
+      font-size:2.5em;
+    }
+  }
+}
+
+.panel-nav ul li.active{
+  background-color:transparent;
+  & > a {
+    color:@md-green;
+  }
+}
+
+shortproductviewminimal {
+  .panel-body {
+    h3 {
+      color: @md-green;
+      font-size: 1em;
+    }
+    & > div {
+      min-height:50px;
+    }
+  }
 }
 
 .badge {

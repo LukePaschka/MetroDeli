@@ -4,13 +4,7 @@ Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
 */
-.jumbotron {margin:0 0 -45px;}
-.dropdown-mega {display: none;}
-
-
-.jumbotron h2 img{
-max-height: 250px;
-}
+/*
 .table{
     background-color: #000000;
     border-radius: 0px;
@@ -153,4 +147,4 @@ min-height: 360px;
 
 footer { 
     display: block;
-}
+}*/
