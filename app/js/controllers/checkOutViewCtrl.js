@@ -127,9 +127,11 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
         if ($scope.metroDeliCostCenter) {
             if (validCostCenter($scope.metroDeliCostCenter)) {
                 $scope.currentOrder.CostCenter = $scope.metroDeliCostCenter;
+                $scope.cart_order.$setValidity('CostCenter', true);
             }
             else {
                 $scope.currentOrder.CostCenter = null;
+                $scope.cart_order.$setValidity('CostCenter', false);
             }
         }
     }, true);
