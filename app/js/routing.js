@@ -46,5 +46,6 @@ four51.app.config(['$routeProvider', '$locationProvider', function($routeProvide
 		when('/process', { templateUrl: 'partials/projectProcess.html' }).
 		when('/home', { templateUrl: 'partials/Messages/home.html' }).
         when('/sales', { templateUrl: 'partials/controls/salesDocs.html', controller: 'SalesDocsCtrl' }).
+		when('/equipment', { templateUrl: 'partials/equipment.html' }).
 		otherwise({redirectTo: '/home'});
 }]);
