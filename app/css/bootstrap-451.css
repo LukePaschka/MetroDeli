@@ -10541,3 +10541,17 @@ label.required {
     height: 36px;
   }
 }
+.sales-doc-panel a {
+  display: block;
+}
+.sales-doc-panel a img {
+  max-width: 100%;
+  max-height: 260px;
+  min-height: 260px;
+  margin: 0 auto;
+}
+.sales-doc-panel .caption {
+  min-height: 50px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
