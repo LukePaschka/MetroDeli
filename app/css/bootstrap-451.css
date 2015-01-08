@@ -506,10 +506,10 @@ a.text-success:hover {
   color: #2b542c;
 }
 .text-info {
-  color: #31708f;
+  color: #cade38;
 }
 a.text-info:hover {
-  color: #245269;
+  color: #afc320;
 }
 .text-warning {
   color: #8a6d3b;
@@ -4526,13 +4526,13 @@ a.thumbnail.active {
 .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
-  color: #31708f;
+  color: #cade38;
 }
 .alert-info hr {
   border-top-color: #a6e1ec;
 }
 .alert-info .alert-link {
-  color: #245269;
+  color: #afc320;
 }
 .alert-warning {
   background-color: #fcf8e3;
@@ -4739,26 +4739,26 @@ a.list-group-item-success.active:focus {
   border-color: #3c763d;
 }
 .list-group-item-info {
-  color: #31708f;
+  color: #cade38;
   background-color: #d9edf7;
 }
 a.list-group-item-info {
-  color: #31708f;
+  color: #cade38;
 }
 a.list-group-item-info .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-info:hover,
 a.list-group-item-info:focus {
-  color: #31708f;
+  color: #cade38;
   background-color: #c4e3f3;
 }
 a.list-group-item-info.active,
 a.list-group-item-info.active:hover,
 a.list-group-item-info.active:focus {
   color: #fff;
-  background-color: #31708f;
-  border-color: #31708f;
+  background-color: #cade38;
+  border-color: #cade38;
 }
 .list-group-item-warning {
   color: #8a6d3b;
@@ -5072,12 +5072,12 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #000000;
 }
 .panel-primary {
-  border-color: #cccccc;
+  border-color: #000000;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #cade38;
-  border-color: #cccccc;
+  background-color: #000000;
+  border-color: #000000;
 }
 .panel-primary > .panel-heading + .panel-collapse .panel-body,
 .panel-primary > .panel-heading + .panel-collapse .panel-category-list:not(.no-panels),
@@ -5085,7 +5085,7 @@ a.list-group-item-danger.active:focus {
 .panel-primary > .panel-heading + .panel-collapse .panel-lineitem,
 .panel-primary > .panel-heading + .panel-collapse .panel-order-history,
 .panel-primary > .panel-heading + .panel-collapse .panel-order-shipping-multiple {
-  border-top-color: #cccccc;
+  border-top-color: #000000;
 }
 .panel-primary > .panel-footer + .panel-collapse .panel-body,
 .panel-primary > .panel-footer + .panel-collapse .panel-category-list:not(.no-panels),
@@ -5093,7 +5093,7 @@ a.list-group-item-danger.active:focus {
 .panel-primary > .panel-footer + .panel-collapse .panel-lineitem,
 .panel-primary > .panel-footer + .panel-collapse .panel-order-history,
 .panel-primary > .panel-footer + .panel-collapse .panel-order-shipping-multiple {
-  border-bottom-color: #cccccc;
+  border-bottom-color: #000000;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -5123,7 +5123,7 @@ a.list-group-item-danger.active:focus {
   border-color: #bce8f1;
 }
 .panel-info > .panel-heading {
-  color: #31708f;
+  color: #cade38;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
