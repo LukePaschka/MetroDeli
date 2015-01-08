@@ -52,4 +52,8 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 			$scope.sorter = s.replace(' DESC', "");
 		$scope.direction = s.indexOf('DESC') > -1;
 	});
+
+	if ($scope.currentCategory.Name == "Picture Gallery"){
+		$scope.navStatus.visible == false;
+	}
 }]);
