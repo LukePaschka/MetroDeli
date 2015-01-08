@@ -10294,6 +10294,22 @@ table[datepicker] {
   text-transform: none;
   font-size: 2.5em;
 }
+.panel.panel-order .panel-heading .panel-title {
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+form[name="addToOrderForm"] .panel.panel-default,
+form[name="addToOrderForm"] .panel.panel-search,
+form[name="addToOrderForm"] .panel.panel-category-list ul li a .empty,
+form[name="addToOrderForm"] .panel.panel-order {
+  border-color: #cade38;
+}
+form[name="addToOrderForm"] .panel.panel-default .panel-heading,
+form[name="addToOrderForm"] .panel.panel-search .panel-heading,
+form[name="addToOrderForm"] .panel.panel-category-list ul li a .empty .panel-heading,
+form[name="addToOrderForm"] .panel.panel-order .panel-heading {
+  background-color: #cade38;
+  color: #000;
+}
 .panel-nav ul li.active {
   background-color: transparent;
 }
