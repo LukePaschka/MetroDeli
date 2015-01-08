@@ -10419,6 +10419,13 @@ shortproductviewminimal .panel-order-shipping-multiple > div {
 .project-process > div {
   border: 1px solid #fff;
 }
+.project-process > div figure {
+  padding: 10px;
+}
+.project-process > div figure img {
+  max-width: 100%;
+  margin: 0 auto;
+}
 .project-process > div ul {
   padding: 20px;
 }
