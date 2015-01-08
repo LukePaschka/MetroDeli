@@ -54,6 +54,6 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 	});
 
 	if ($scope.currentCategory.Name == "Picture Gallery"){
-		$scope.navStatus.visible == false;
+		$scope.navStatus.visible = false;
 	}
 }]);
