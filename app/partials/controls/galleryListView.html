@@ -2,10 +2,8 @@
     <div class="panel-heading">
         <h3 class="panel-title">
             {{'Gallery' | r | xlat}}
+            <p>{{LineItem.Product.Description}}</p>
         </h3>
-        <h4 class="panel-title">
-            {{LineItem.Product.Description}}
-        </h4>
     </div>
     <div class="panel-body" ng-repeat="sg in StaticSpecGroups.EvenSpecGroups" ng-show="StaticSpecGroups.EvenSpecGroups">
         <div class="col-md-6" ng-repeat="s in sg.Specs">
