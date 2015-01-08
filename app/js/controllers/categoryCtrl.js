@@ -43,7 +43,7 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 	});
 
     // panel-nav
-    $scope.navStatus = Nav.status;
+//    $scope.navStatus = Nav.status;
     $scope.toggleNav = Nav.toggle;
 	$scope.$watch('sort', function(s) {
 		if (!s) return;
@@ -54,7 +54,8 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 	});
 
 	if ($scope.currentCategory && $scope.currentCategory.InteropID == "Gallery"){
-		$scope.navStatus.visible = false;
+		Nav.status.visible = false;
+	} else {
+		Nav.status.visible = true;
 	}
-	else $scope.navStatus.visible = true;
 }]);
