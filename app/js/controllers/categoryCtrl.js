@@ -53,7 +53,7 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 		$scope.direction = s.indexOf('DESC') > -1;
 	});
 
-	if ($scope.currentCategory.Name == "Picture Gallery"){
+	if ($scope.currentCategory && $scope.currentCategory.InteropID == "Gallery"){
 		$scope.navStatus.visible = false;
 	}
 	else $scope.navStatus.visible = true;

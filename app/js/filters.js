@@ -141,4 +141,20 @@ four51.app.filter('metrodeliprojectrequestfields', function() {
     }
 });
 
+four51.app.filter('filteredCategories', function() {
+	return function(categories) {
+		var result = [];
 
+		var filteredCategoryIDs = [
+			"Gallery"
+		];
+
+		angular.forEach(categories, function(category) {
+			if (filteredCategoryIDs.indexOf(category.InteropID) == -1) {
+				result.push(category);
+			}
+		});
+
+		return result;
+	}
+});

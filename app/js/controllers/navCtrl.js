@@ -14,7 +14,7 @@ function ($location, $route, $scope, $451, User) {
 
     // http://stackoverflow.com/questions/12592472/how-to-highlight-a-current-menu-item-in-angularjs
     $scope.isActive = function(path) {
-        var cur_path = $location.path().replace('/', '');
+			var cur_path = $location.path().replace('/', '');
         var result = false;
 
         if (path instanceof Array) {
@@ -33,13 +33,17 @@ function ($location, $route, $scope, $451, User) {
     $scope.isInPath = function(path) {
         var cur_path = $location.path().replace('/', '');
         var result = false;
-
-        if(cur_path.indexOf(path) > -1) {
-            result = true;
-        }
-        else {
-            result = false;
-        }
+				if (path instanceof Array) {
+					angular.forEach(path, function(p) {
+						if(cur_path.indexOf(p) > -1) {
+							result = true;
+						}
+					})
+				} else {
+					if(cur_path.indexOf(path) > -1) {
+						result = true;
+					}
+				}
         return result;
     };
 

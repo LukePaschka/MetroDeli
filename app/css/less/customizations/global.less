@@ -1,5 +1,7 @@
 .container-view {
   margin-top:0;
+  padding-top:20px;
+  padding-bottom:20px;
   background-color:#000;
 }
 .panel {
@@ -13,18 +15,38 @@
     }
   }
   &.panel-order {
-    .panel-heading .panel-title {
-      font-family: @pathway-gothic-one;
+    .panel-heading {
+      background-color:#333;
+      .panel-title {
+        font-family: @pathway-gothic-one;
+      }
+    }
+    .panel-body {
+      background-color:#222;
     }
   }
 }
 
-form[name="addToOrderForm"] {
-  .panel.panel-default{
-    border-color:@md-green;
-    .panel-heading {
-      background-color:@md-green;
-      color:#000;
+form {
+  &[name="addToOrderForm"] {
+    .panel.panel-default {
+      border-color: @md-green;
+      .panel-heading {
+        background-color: @md-green;
+        color: #000;
+      }
+    }
+  }
+  &[name="cart"] {
+    .panel.panel-default{
+      border-color:#222;
+      .panel-heading {
+        background-color:#333;
+        color:#fff;
+        .panel-title {
+          font-family: @pathway-gothic-one;
+        }
+      }
     }
   }
 }
@@ -34,6 +56,10 @@ form[name="addToOrderForm"] {
   & > a {
     color:@md-green;
   }
+}
+
+.panel-lineitem {
+  background-color:#222;
 }
 
 shortproductviewminimal {
