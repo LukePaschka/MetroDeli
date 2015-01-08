@@ -10,7 +10,7 @@
     float:right;
     & > li {
       padding:0 6px 0 5px;
-      &:not(:first-of-type){
+      &:not(:first-of-type){ 
         padding:0 6px;
         border-left:1px solid #fff;
       }
@@ -23,7 +23,7 @@
         }
       }
     }
-    & > .hidden-md + li {
+    & > .hidden-md + li:not(.hidden-md) {
       border-left:none;
     }
   }
