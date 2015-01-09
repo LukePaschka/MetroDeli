@@ -63,11 +63,23 @@
                             </div>
                             <div>
                                 <label>Survey Target Date</label>
-                                <input type="text" class="form-control" tabindex="13" ng-model="EmailDetails.SurveyDate" datepicker-popup="MM/dd/yyyy" placeholder="Survey Target Date" />
+                                <input type="text" class="form-control" tabindex="13" ng-model="EmailDetails.SurveyDate" datepicker-popup="MM/dd/yyyy" is-open="surveydateopened" placeholder="Survey Target Date" />
+                                <div class="btn btn-default btn-block btn-date hidden-lg hidden-md"
+                                     ng-click="$event.preventDefault();$event.stopPropagation();surveydateopened = !surveydateopened;"
+                                     style="margin:0; height:40px; padding-top:8px;">
+                                    {{EmailDetails.SurveyDate ? '' : 'Tap'}}
+                                    <span class="text-info">{{EmailDetails.SurveyDate | date:user.Culture.DateFormat.short}}</span>
+                                </div>
                             </div>
                             <div>
                                 <label>Install Target Date</label>
-                                <input type="text" class="form-control" tabindex="14" ng-model="EmailDetails.InstallDate" datepicker-popup="MM/dd/yyyy" placeholder="Install Target Date" />
+                                <input type="text" class="form-control" tabindex="14" ng-model="EmailDetails.InstallDate" datepicker-popup="MM/dd/yyyy" is-open="installdateopened" placeholder="Install Target Date" />
+                                <div class="btn btn-default btn-block btn-date hidden-lg hidden-md"
+                                     ng-click="$event.preventDefault();$event.stopPropagation();installdateopened = !installdateopened;"
+                                     style="margin:0; height:40px; padding-top:8px;">
+                                    {{EmailDetails.InstallDate ? '' : 'Tap'}}
+                                    <span class="text-info">{{EmailDetails.InstallDate | date:user.Culture.DateFormat.short}}</span>
+                                </div>
                             </div>
                             <div>
                                 <label>Additional Comments</label>
