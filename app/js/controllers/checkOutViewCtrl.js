@@ -139,4 +139,8 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
         }
     }, true);
 
+    if ($scope.currentOrder && $scope.currentOrder.CostCenter) {
+        $scope.metroDeliCostCenter = $scope.currentOrder.CostCenter;
+    }
+
 }]);
