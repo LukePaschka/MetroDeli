@@ -5,21 +5,31 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 		$scope.securityWarning = false;
 
 		if($scope.user.Type != 'TempCustomer')
-			$scope.user.TempUsername = $scope.user.Username;
-		$scope.loginHelp = function(){
+			$scope.user.TempUsername = $scope.user.Username
+		$scope.getToken = function(){
 			$scope.loginasuser.SendVerificationCodeByEmail = true;
+			$scope.emailResetLoadingIndicator = true;
+			User.login($scope.loginasuser, function(){
+					$scope.resetPasswordError = null;
+					$scope.enterResetToken = true;
+					$scope.emailResetLoadingIndicator = false;
+				},
+				function(err){
+					$scope.resetPasswordError =  $sce.trustAsHtml(err.Message);
+					$scope.emailResetLoadingIndicator = false;
+				});
 
-			if($scope.enterResetToken){
-				User.reset($scope.loginasuser, function(){console.log("success");}, function(err){$scope.resetPasswordError = err.Message;})
-			}else{
-				User.login($scope.loginasuser, function(){
-						$scope.resetPasswordError = null;
-						$scope.enterResetToken = true;
-					},
-					function(err){
-						$scope.resetPasswordError = err.Message;
-					});
-			}
+		}
+		$scope.resetWithToken= function(){
+			$scope.emailResetLoadingIndicator = true;
+			User.reset($scope.loginasuser, function(user){
+					delete $scope.loginasuser;
+					$location.path('catalog');
+				},
+				function(err){
+					$scope.emailResetLoadingIndicator = false;
+					$scope.resetPasswordError = $sce.trustAsHtml(err.Message);
+				});
 		}
 		$scope.save = function() {
 			$scope.actionMessage = null;
@@ -29,16 +39,12 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 			if($scope.user.Type == 'TempCustomer')
 				$scope.user.ConvertFromTempUser = true;
 
-			var redirecttocheckout = $scope.user.Type == 'TempCustomer';
 			User.save($scope.user,
 				function(u) {
 					$scope.securityWarning = false;
 					$scope.displayLoadingIndicator = false;
 					$scope.actionMessage = 'Your changes have been saved';
-					if (redirecttocheckout){
-						$scope.user.TempUsername = u.Username;
-					}
-					$location.path('checkout');
+					$scope.user.TempUsername = u.Username;
 				},
 				function(ex) {
 					$scope.displayLoadingIndicator = false;
@@ -52,12 +58,7 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 		};
 		$scope.loginExisting = function(){
 			User.login({Username: $scope.loginasuser.Username, Password:  $scope.loginasuser.Password, ID: $scope.user.ID, Type: $scope.user.Type},function(u){
-				if($scope.currentOrder){
-					$location.path("/checkout");
-				}
-				else{
-					$location.path("/catalog");
-				}
+				$location.path("/catalog");
 
 			}, function(err){
 				$scope.loginAsExistingError = err.Message;

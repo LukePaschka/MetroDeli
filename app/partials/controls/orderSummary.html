@@ -16,7 +16,7 @@
             <span class="text-info">{{'Subtotal' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.Subtotal | culturecurrency}}</span>
         </p>
-        <p ng-if="!(user.Permissions.contains('HidePricing'))">
+        <p ng-show="!(user.Permissions.contains('HidePricing')) && currentOrder.ShippingCost > 0">
             <span class="text-info">{{('Shipping' | r) + ' ' + ('Costs' | r) | xlat}}</span>
             <span class="pull-right">{{currentOrder.ShippingCost | culturecurrency}}</span>
         </p>
