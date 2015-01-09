@@ -98,7 +98,7 @@ four51.app.controller('CartViewCtrl', ['$scope', '$routeParams', '$location', '$
 					}
 				);
 			}
-		}
+		};
 
 		$scope.checkOut = function() {
 			$scope.displayLoadingIndicator = true;
@@ -107,7 +107,7 @@ four51.app.controller('CartViewCtrl', ['$scope', '$routeParams', '$location', '$
 			Order.save($scope.currentOrder,
 				function(data) {
 					$scope.currentOrder = data;
-					<!-- $location.path(isEditforApproval ? 'checkout/' + $routeParams.id : 'checkout'); -->
+					/*$location.path(isEditforApproval ? 'checkout/' + $routeParams.id : 'checkout');*/
 					$scope.user.Type == 'TempCustomer' ? $location.path('admin') : $location.path('checkout');
 					$scope.displayLoadingIndicator = false;
 				},

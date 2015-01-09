@@ -1,5 +1,5 @@
-four51.app.controller('CategoryCtrl', ['$routeParams', '$sce', '$scope', '$451', 'Category', 'Product', 'Nav',
-function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
+four51.app.controller('CategoryCtrl', ['$routeParams', '$sce', '$scope', '$location', '$451', 'Category', 'Product', 'Nav',
+function ($routeParams, $sce, $scope, $location, $451, Category, Product, Nav) {
 	$scope.productLoadingIndicator = true;
 	$scope.settings = {
 		currentPage: 1,
@@ -43,7 +43,7 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 	});
 
     // panel-nav
-//    $scope.navStatus = Nav.status;
+    $scope.navStatus = Nav.status;
     $scope.toggleNav = Nav.toggle;
 	$scope.$watch('sort', function(s) {
 		if (!s) return;
@@ -53,9 +53,28 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 		$scope.direction = s.indexOf('DESC') > -1;
 	});
 
-	if ($scope.currentCategory && $scope.currentCategory.InteropID == "Gallery"){
+/*	if ($scope.currentCategory && $scope.currentCategory.InteropID == "Gallery"){
 		Nav.status.visible = false;
 	} else {
 		Nav.status.visible = true;
-	}
+	}*/
+
+    $scope.isActive = function(path) {
+        //var cur_path = $location.path().replace('/', '');
+        var splat = $location.path().split('/');
+        var cur_path = splat[splat.length-1];
+        var result = false;
+
+        if (path instanceof Array) {
+            angular.forEach(path, function(p) {
+                if (p == cur_path && !result)
+                    result = true;
+            });
+        }
+        else {
+            if (cur_path == path)
+                result = true;
+        }
+        return result;
+    };
 }]);

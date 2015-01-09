@@ -1,5 +1,5 @@
 <section>
-    <aside class="col-sm-3 col-collapse visible-md visible-lg" ng-if="navStatus.visible">
+    <aside class="col-sm-3 col-collapse visible-md visible-lg" ng-if="navStatus.visible && !isActive(['PicGroup','Gallery'])">
         <div class="panel panel-default panel-nav">
             <div class="panel-heading">
                 <h3 class="panel-title">
@@ -13,7 +13,7 @@
             </nav>
         </div>
     </aside>
-    <div class="col-collapse" ng-class="{ 'col-md-8 col-md-offset-1': navStatus.visible }" >
+    <div class="col-collapse" ng-class="{ 'col-md-8 col-md-offset-1': navStatus.visible && !isActive(['PicGroup','Gallery']) }" >
 
         <categorylistview></categorylistview>
 
