@@ -39,12 +39,16 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 			if($scope.user.Type == 'TempCustomer')
 				$scope.user.ConvertFromTempUser = true;
 
+			var redirecttocheckout = ($scope.user.Type == 'TempCustomer') && ($scope.cartCount > 0);
 			User.save($scope.user,
 				function(u) {
 					$scope.securityWarning = false;
 					$scope.displayLoadingIndicator = false;
 					$scope.actionMessage = 'Your changes have been saved';
 					$scope.user.TempUsername = u.Username;
+					if (redirecttocheckout)
+						$location.path('checkout');
+					else $location.path('catalog');
 				},
 				function(ex) {
 					$scope.displayLoadingIndicator = false;
@@ -58,7 +62,9 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 		};
 		$scope.loginExisting = function(){
 			User.login({Username: $scope.loginasuser.Username, Password:  $scope.loginasuser.Password, ID: $scope.user.ID, Type: $scope.user.Type},function(u){
-				$location.path("/catalog");
+				if ($scope.cartCount > 0)
+					$location.path("/checkout");
+				else $location.path("/catalog");
 
 			}, function(err){
 				$scope.loginAsExistingError = err.Message;
