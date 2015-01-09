@@ -10310,6 +10310,13 @@ table[datepicker] {
 .panel.panel-order .panel-order-shipping-multiple {
   background-color: #222;
 }
+gallery-list-view h3.panel-title p {
+  font-size: 0.5em;
+  font-weight: bold;
+  font-family: 'Droid Sans', sans-serif;
+  color: #cade38;
+  letter-spacing: normal;
+}
 form[name="addToOrderForm"] .panel.panel-default,
 form[name="addToOrderForm"] .panel.panel-search,
 form[name="addToOrderForm"] .panel.panel-category-list ul li a .empty,

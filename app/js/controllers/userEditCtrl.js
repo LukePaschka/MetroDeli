@@ -5,7 +5,7 @@ four51.app.controller('UserEditCtrl', ['$scope', '$location', '$sce', 'User',
 		$scope.securityWarning = false;
 
 		if($scope.user.Type != 'TempCustomer')
-			$scope.user.TempUsername = $scope.user.Username
+			$scope.user.TempUsername = $scope.user.Username;
 		$scope.loginHelp = function(){
 			$scope.loginasuser.SendVerificationCodeByEmail = true;
 
