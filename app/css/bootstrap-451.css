@@ -10375,6 +10375,9 @@ shortproductviewminimal .panel-order-history > div,
 shortproductviewminimal .panel-order-shipping-multiple > div {
   min-height: 60px;
 }
+.panel-product-list ul li.inline h3 {
+  min-height: 70px;
+}
 .badge {
   color: #000;
 }
