@@ -24,16 +24,23 @@ function ($routeParams, $sce, $scope, $location, $451, Category, Product, Nav) {
 			_search();
 	});
 
-	if ($routeParams.categoryInteropID) {
-	    $scope.categoryLoadingIndicator = true;
-        Category.get($routeParams.categoryInteropID, function(cat) {
-            $scope.currentCategory = cat;
-	        $scope.categoryLoadingIndicator = false;
-        });
-    }
-	else if($scope.tree){
-		$scope.currentCategory ={SubCategories:$scope.tree};
+	function getCategory(interopID) {
+		$scope.categoryLoadingIndicator = true;
+		Category.get(interopID, function(cat) {
+			$scope.currentCategory = cat;
+			$scope.categoryLoadingIndicator = false;
+		});
 	}
+
+	if ($routeParams.categoryInteropID) {
+		getCategory($routeParams.categoryInteropID);
+  }
+	else {
+		getCategory('MD_MAIN');
+	}
+//	else if($scope.tree){
+//		$scope.currentCategory ={SubCategories:$scope.tree};
+//	}
 
 
 	$scope.$on("treeComplete", function(data){
