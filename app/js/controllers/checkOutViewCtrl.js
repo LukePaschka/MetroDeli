@@ -128,6 +128,21 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
             if (validCostCenter($scope.metroDeliCostCenter)) {
                 $scope.currentOrder.CostCenter = $scope.metroDeliCostCenter;
                 $scope.cart_order.$setValidity('CostCenter', true);
+                $scope.errorMessage = null;
+                var auto = $scope.currentOrder.autoID;
+                Order.save($scope.currentOrder,
+                    function(data) {
+                        $scope.currentOrder = data;
+                        if (auto) {
+                            $scope.currentOrder.autoID = true;
+                            $scope.currentOrder.ExternalID = 'auto';
+                        }
+                    },
+                    function(ex) {
+                        $scope.currentOrder.ExternalID = null;
+                        $scope.errorMessage = ex.Message;
+                    }
+                );
             }
             else {
                 $scope.currentOrder.CostCenter = null;
