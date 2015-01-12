@@ -3,11 +3,11 @@
         <section>
             <div>
                 <ul class="nav navbar-nav pull-left">
-                    <li class="back animated fadeInLeft" ng-class="{'ng-hide': isActive('home')}">
+<!--                    <li class="back animated fadeInLeft" ng-class="{'ng-hide': isActive('home')}">
                         <a href back-step class="back">
                             <i class="fa fa-arrow-left"></i>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="home" ng-class="{'active': isActive('home')}">
                         <a id="451qa_home_link" ng-show="Four51User.isAuthenticated()" href="home">
                             <i class="fa fa-home"></i>
@@ -20,12 +20,12 @@
                             <span class="hidden-xs">{{'Orders' | r | xlat}}</span>
                         </a>
                     </li>
-                    <li class="report" ng-if="user.Permissions.contains('AdvancedReporting')" ng-class="{'active': isActive('reports')}">
+                    <!--<li class="report" ng-if="user.Permissions.contains('AdvancedReporting')" ng-class="{'active': isActive('reports')}">
                         <a id="451qa_order_link" href="reports">
                             <i class="fa fa-bar-chart-o"></i>
                             <span class="hidden-xs">{{'Reports' | r | xlat}}</span>
                         </a>
-                    </li>
+                    </li>-->
                     <li  ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
                         <a id="451qa_acct_link" href="admin" class="hidden-md hidden-lg " >
                             <i class="fa fa-cog"></i>
