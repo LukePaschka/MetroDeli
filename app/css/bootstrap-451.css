@@ -4524,8 +4524,8 @@ a.thumbnail.active {
   color: #2b542c;
 }
 .alert-info {
-  background-color: #333333;
-  border-color: #333333;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
   color: #cade38;
 }
 .alert-info hr {
@@ -10571,6 +10571,8 @@ label.required {
 @media (max-width: 1199px) {
   .navbar-inverse .navbar-nav > li > a {
     font-size: 0.8em;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .navbar-inverse .navbar-nav > .hidden-md + li:not(.hidden-md) {
