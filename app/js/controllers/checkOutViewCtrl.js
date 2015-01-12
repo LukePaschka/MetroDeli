@@ -150,7 +150,7 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
             }
         }
         else {
-            $scope.cart_order.$setValidity('CostCenter', true);
+					if ($scope.cart_order)	$scope.cart_order.$setValidity('CostCenter', true);
         }
     }, true);
 
