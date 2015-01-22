@@ -10292,15 +10292,12 @@ table[datepicker] {
 }
 .panel .panel-heading .panel-title {
   padding: 10px 15px;
-  font-family: 'Permanent Marker', cursive;
-  text-transform: none;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-size: 2.5em;
+  letter-spacing: normal;
 }
 .panel.panel-order .panel-heading {
   background-color: #333;
-}
-.panel.panel-order .panel-heading .panel-title {
-  font-family: 'Pathway Gothic One', sans-serif;
 }
 .panel.panel-order .panel-body,
 .panel.panel-order .panel-category-list:not(.no-panels),
@@ -10530,6 +10527,14 @@ label {
 label.required {
   color: #fff;
 }
+.dropdown-menu,
+.dropdown-mega .dropdown-menu {
+  border-width: 0;
+}
+.dropdown-menu .divider,
+.dropdown-mega .dropdown-menu .divider {
+  background-color: #333;
+}
 .home-view {
   padding-bottom: 20px;
   color: #fff;
@@ -10567,6 +10572,7 @@ label.required {
   height: 40px;
   padding-bottom: 8px;
   padding-top: 8px;
+  font-size: 0.9em;
 }
 @media (max-width: 1199px) {
   .navbar-inverse .navbar-nav > li > a {

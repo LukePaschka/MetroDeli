@@ -14,12 +14,6 @@
                             <span class="hidden-xs">{{'Home' | rc | xlat}}</span>
                         </a>
                     </li>
-                    <li class="order" ng-class="{'active': isActive('order'), 'active-xs': isActive('favoriteorders')}">
-                        <a id="451qa_order_link" href="order">
-                            <i class="fa fa-clipboard"></i>
-                            <span class="hidden-xs">{{'Orders' | r | xlat}}</span>
-                        </a>
-                    </li>
                     <!--<li class="report" ng-if="user.Permissions.contains('AdvancedReporting')" ng-class="{'active': isActive('reports')}">
                         <a id="451qa_order_link" href="reports">
                             <i class="fa fa-bar-chart-o"></i>
@@ -28,18 +22,13 @@
                     </li>-->
                     <li  ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
                         <a id="451qa_acct_link" href="admin" class="hidden-md hidden-lg " >
-                            <i class="fa fa-cog"></i>
+                            <i class="fa fa-user"></i>
                             <span class="hidden-xs">{{'Account' | r | xlat}}</span>
-                        </a>
-                    </li>
-                    <li class="pull-right">
-                        <a href="search">
-                            <span><i class="fa fa-search"></i></span>
                         </a>
                     </li>
                     <li  class="dropdown admin-user visible-md visible-lg " ng-class="{'active': isActive(['admin', 'addresses', 'address', 'messages', 'message', 'favoriteorders'])}">
                         <a style="border: none;" id="451qa_acct_link2" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-cog"></i>
+                            <i class="fa fa-user"></i>
                             <span class="hidden-xs">{{'Account' | r | xlat}}</span>
                             <b class="caret"></b>
                         </a>
@@ -64,11 +53,11 @@
                                     {{'Favorites' | r | xlat}}
                                 </a>
                             </li>
-                            <!--<li id="451qa_mesg_link" ng-show="user.Permissions.contains('ViewContactUs')" class="contactus">
-                                <a href="contactus">
-                                    {{'Contact Us' | r | xlat}}
+                            <li class="order" ng-class="{'active': isActive('order')}">
+                                <a id="451qa_order_link" href="order">
+                                    {{'Orders' | r | xlat}}
                                 </a>
-                            </li>-->
+                            </li>
                             <li>
                                 <a href="#" neworder ng-if="user.Permissions.contains('MultipleShoppingCart') && currentOrder" class="neworder" ng-click="newOrderLoadingIndicator = true;startNewOrder()">
                                     {{"Start" | r | xlat}} {{"New" | r | xlat}} {{"Order" | r | xlat}}
@@ -88,6 +77,18 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="contactus" ng-class="{'active': isActive('contactus')}">
+                        <a href="contactus">
+                            <i class="fa fa-phone"></i>
+                            <span class="hidden-xs">{{'Contact Us' | r | xlat}}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search">
+                            <i class="fa fa-search"></i>
+                            <span class="hidden-xs">Search</span>
+                        </a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">

@@ -1,5 +1,5 @@
 <div class="row" ng-controller="ProjectRequestCtrl">
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-md-7">
         <form name="email_Send" novalidate="">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -10,13 +10,16 @@
                 <div class="panel-body">
                     <p>What a site. Make the best investment for your business since sliced bread.</p>
                     <p><i>In signing up for a survey, you are agreeing to an approximately $500 investment to evaluate your facility</i></p>
+                    <hr/>
                     <div ng-init="emailSent = false" style="margin-top:30px;">
                         <div style="margin-bottom: 15px;" ng-show="!emailSent">
-                            <h4>Please fill out the following details:</h4>
-                            <div>
-                                <label>Site Name</label>
-                                <input type="text" class="form-control" tabindex="1" ng-model="EmailDetails.SiteName" placeholder="Site Name" />
-                            </div>
+                            <div class="view-form-icon">
+                                <div>
+                                    <label>Site Name</label>
+                                    <input type="text" class="form-control" tabindex="1" ng-model="EmailDetails.SiteName" placeholder="Site Name" />
+                                </div>
+
+
                             <div>
                                 <label>US Foods Customer Number</label>
                                 <input type="text" class="form-control" tabindex="2" ng-model="EmailDetails.USFoodsNum" placeholder="US Foods Customer Number" />
@@ -83,7 +86,8 @@
                             </div>
                             <div>
                                 <label>Additional Comments</label>
-                                <input type="text" class="form-control" tabindex="15" ng-model="EmailDetails.AdditionalComments" placeholder="Additional Comments"/>
+                                <textarea type="text" class="form-control" tabindex="15" ng-model="EmailDetails.AdditionalComments" placeholder="Additional Comments"/>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +97,7 @@
                             <li ng-repeat="error in formErrors">{{error | metrodeliprojectrequestfields}}</li>
                         </ul>
                     </div>
-                    <button class="btn btn-success btn-block btn-lg" type="button" ng-show="!emailSent" ng-click="emailSend(EmailDetails)" ng-disabled="email_Send.$invalid"><i ng-show="lineItemErrors.length > 1" class="fa fa-warning"></i>Submit</button>
+                    <button class="btn btn-success pull-right" type="button" ng-show="!emailSent" ng-click="emailSend(EmailDetails)" ng-disabled="email_Send.$invalid"><i ng-show="lineItemErrors.length > 1" class="fa fa-warning"></i>Submit</button>
                     <div ng-show="emailSent" style="margin-top: 15px;margin-bottom:15px;">
                         <div class="alert alert-success">Your email has been sent!</div>
                     </div>
@@ -101,7 +105,7 @@
             </div>
         </form>
     </div>
-    <div class="col-sm-6 hidden-xs">
+    <div class="col-sm-6 col-md-5 hidden-xs">
         <figure style="padding:100px 20px 20px">
             <img style="margin:0 auto; max-width:100%;" src="css/images/projectrequest.jpg"/>
         </figure>

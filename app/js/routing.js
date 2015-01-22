@@ -42,7 +42,7 @@ four51.app.config(['$routeProvider', '$locationProvider', function($routeProvide
 		when('/conditions', { templateUrl: 'partials//Conditions/conditions.html', controller: 'ConditionsCtrl' }).
 		when('/reports', { templateUrl: 'partials/reportsView.html', controller: 'ReportsCtrl' }).
 		when('/report/:id', { templateUrl: 'partials/Reporting/reportView.html', controller: 'ReportCtrl' }).
-		when('/contactus/', { templateUrl: 'partials/Messages/contactus.html' }).
+		when('/contactus', { templateUrl: 'partials/Messages/contactus.html' }).
 		when('/process', { templateUrl: 'partials/projectProcess.html' }).
 		when('/home', { templateUrl: 'partials/Messages/home.html' }).
         when('/sales', { templateUrl: 'partials/controls/salesDocs.html', controller: 'SalesDocsCtrl' }).
