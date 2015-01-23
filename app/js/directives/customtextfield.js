@@ -4,7 +4,8 @@ four51.app.directive('customtextfield', function() {
             customfield : '=',
             changed: '=',
             hidesuffix: '@',
-            hideprefix: '@'
+            hideprefix: '@',
+            icon: '@'
         },
         restrict: 'E',
         transclude: true,

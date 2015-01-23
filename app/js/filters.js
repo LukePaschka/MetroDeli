@@ -99,7 +99,8 @@ four51.app.filter('metrodeliorderfields', function() {
         var filteredFields = [
             "US Foods Dept #",
             "Contact Phone",
-            "US Foods PO/Reference"
+            "US Foods PO/Reference",
+            "USFoodsCustomerNumberOrder"
         ];
 
         angular.forEach(fields, function(field) {
@@ -157,4 +158,34 @@ four51.app.filter('filteredCategories', function() {
 
 		return result;
 	}
+});
+
+four51.app.filter('customfields', function() {
+    return function(fields, fieldName, excludeOrOnly) {
+        var results = [];
+
+        angular.forEach(fields, function(field) {
+            if (field.Name == fieldName && excludeOrOnly == 'only') {
+                results.push(field);
+            }
+            else if (field.Name != fieldName && excludeOrOnly == 'exclude') {
+                results.push(field);
+            }
+        });
+
+        return results;
+    }
+});
+
+four51.app.filter('getfieldbyname', function() {
+    return function(fields, name) {
+        var result = null;
+
+        angular.forEach(fields, function(field) {
+            if (field.Name == name) {
+                result = field;
+            }
+        });
+        return result;
+    }
 });

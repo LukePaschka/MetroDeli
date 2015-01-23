@@ -16,9 +16,21 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
 	$scope.hasOrderConfig = OrderConfig.hasConfig($scope.currentOrder, $scope.user);
 	$scope.checkOutSection = $scope.hasOrderConfig ? 'order' : 'shipping';
 
+    function applyUSFoodsNumber(user, order) {
+        var USFoodsNumberField = $filter('getfieldbyname')(user.CustomFields, 'USFoodsCustomerNumberUser');
+        if (USFoodsNumberField.Value) {
+            angular.forEach(order.OrderFields, function(field) {
+                if (field.Name == 'USFoodsCustomerNumberOrder') {
+                    field.Value = USFoodsNumberField.Value;
+                }
+            });
+        }
+    }
+
     function submitOrder() {
 	    $scope.displayLoadingIndicator = true;
 	    $scope.errorMessage = null;
+        applyUSFoodsNumber($scope.user, $scope.currentOrder);
         Order.submit($scope.currentOrder,
 	        function(data) {
 				$scope.user.CurrentOrderID = null;

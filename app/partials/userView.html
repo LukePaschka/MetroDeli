@@ -84,25 +84,24 @@
                 <accountnavigation />
                 <div class="col-sm-6 view-form-icon">
                     <div>
-                        <label ng-show="user.FirstName">{{('First' | r) + ' ' + ('Name' | r) | xlat}}</label>
+                        <label>{{('First' | r) + ' ' + ('Name' | r) | xlat}}</label>
                         <input name="firstname" class="form-control" type="text" required ng-model="user.FirstName" placeholder="{{('First' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" />
                         <i class="fa fa-user"></i>
                     </div>
                     <div>
-                        <label ng-show="user.LastName">{{('Last' | r) + ' ' + ('Name' | r) | xlat}}</label>
+                        <label>{{('Last' | r) + ' ' + ('Name' | r) | xlat}}</label>
                         <input name="lastname" required class="form-control" type="text" ng-model="user.LastName" placeholder="{{('Last' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" />
                         <i class="fa fa-user"></i>
                     </div>
                     <div>
-                        <label ng-show="user.Phone">{{'Phone' | r | xlat}}</label>
+                        <label>{{'Phone' | r | xlat}}</label>
                         <input name="phone" class="form-control" type="text" ng-model="user.Phone" ui-mask="(999) 999-9999" autocomplete="off" />
                         <i class="fa fa-phone"></i>
                     </div>
                     <div>
                         <label class="required">{{'Email' | r | xlat}}</label>
-                        <input name="email" class="form-control" type="email" ng-model="user.Email" required placeholder="{{'Email' | r | xlat}}" autocomplete="off" />
+                        <input name="email" class="form-control" type="email" ng-model="user.Email" required placeholder="{{'Email' | r | xlat}}" autocomplete="off" ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/" />
                         <i class="fa fa-envelope-o"></i>
-                        <inlineerror ng-show="user_form.email.$invalid" title="{{'Please enter a valid' + ' ' +  ('Email' | rl) + ' ' + ('Address' | rl) | xlat}}" />
                     </div>
                 </div>
                 <div class="col-sm-6 view-form-icon">
@@ -113,15 +112,18 @@
                     </div>
                     <!--TODO username input shouldn't default to temporary usernames, if the user is temp, make the placeholder show instead !-->
                     <div>
-                        <label ng-show="user.Password">{{'Password' | r | xlat}}</label>
+                        <label>{{'Password' | r | xlat}}</label>
                         <input name="password" class="form-control" ng-required="user.Type == 'TempCustomer'" type="password" ng-model="user.Password" placeholder="{{'Password' | r | xlat}}" autocomplete="off" />
                         <i class="fa fa-lock"></i>
                     </div>
                     <div>
-                        <label ng-show="user.ConfirmPassword">{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}</label>
+                        <label>{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}</label>
                         <input name="confirm_password" ng-match="user.Password" ng-required="user.Type == 'TempCustomer' || user.Password" class="form-control" type="password" ng-model="user.ConfirmPassword" placeholder="{{('Confirm' | r) + ' ' + ('Password' | r) | xlat}}" autocomplete="off" />
                         <i class="fa fa-lock"></i>
                         <inlineerror ng-show="user_form.confirm_password.$error.match" title="{{('Password' | r) + 's do not match!' | xlat}}" />
+                    </div>
+                    <div ng-repeat="field in user.CustomFields | customfields:'USFoodsCustomerNumberUser':'only'">
+                        <customtextfield customfield="field" icon="fa-user" ng-if="field.ControlType == 'Text' && field.DisplayToUser"></customtextfield>
                     </div>
                     <span class="alert-warning" ng-show="securityWarning">
                         <ul>
@@ -147,8 +149,8 @@
                 </div>
             </div>
             <div class="panel-body" >
-                <div  ng-if="user.CustomFields" class="col-sm-6 view-form-icon">
-                    <div ng-repeat="field in user.CustomFields">
+                <div ng-if="user.CustomFields" class="col-sm-6 view-form-icon">
+                    <div ng-repeat="field in user.CustomFields | customfields:'USFoodsCustomerNumberUser':'exclude'">
                         <customfilefield customfield="field" ng-if="field.ControlType == 'File' && field.DisplayToUser"></customfilefield>
                         <customtextfield customfield="field" ng-if="field.ControlType == 'Text' && field.DisplayToUser"></customtextfield>
                         <customselectionfield customfield="field" ng-if="field.ControlType == 'Selection' && field.DisplayToUser"></customselectionfield>
