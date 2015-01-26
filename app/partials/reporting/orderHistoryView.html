@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div ng-show="order.Approvals" class="panel panel-default approval-rule-status-summary">
+            <!--<div ng-show="order.Approvals" class="panel panel-default approval-rule-status-summary">
                 <div class="panel-heading">
                     <h3 class="panel-title panel-primary">{{'Approvals' | r | xlat}}</h3>
                 </div>
@@ -84,7 +84,7 @@
                     <approval ng-show="order.Status == 'AwaitingApproval' && (order.UserCanApprove || user.Permissions.contains('ApproveAllOrders'))" order="order"/>
                     <approvalrulelist order="order" />
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="navbar-fixed-bottom">
             <div class="view-response-message alert-success text-center" alert-show="actionMessage">
