@@ -10314,6 +10314,10 @@ gallery-list-view h3.panel-title p {
   color: #cade38;
   letter-spacing: normal;
 }
+.short-gallery-list-view a {
+  margin-bottom: 20px;
+  color: #fff;
+}
 form[name="addToOrderForm"] .panel.panel-default,
 form[name="addToOrderForm"] .panel.panel-search,
 form[name="addToOrderForm"] .panel.panel-category-list ul li a .empty,
@@ -10387,9 +10391,9 @@ shortproductviewminimal .panel-order-shipping-multiple > div {
   color: #fff;
 }
 .nav.nav-tabs > li.active > a {
-  background-color: #cade38;
+  background-color: #cade38 !important;
   color: #000;
-  border-color: #c3d924;
+  border-color: #c3d924 !important;
 }
 .nav.nav-tabs > li:hover > a,
 .nav.nav-tabs > li:focus > a {
@@ -10535,6 +10539,63 @@ label.required {
 .dropdown-mega .dropdown-menu .divider {
   background-color: #333;
 }
+.md-green-banner {
+  position: relative;
+  max-width: 885px;
+  margin-left: -5px;
+  min-height: 90px;
+  padding: 15px;
+  background-color: #cade38;
+  color: #000;
+  font-weight: bold;
+}
+.md-green-banner a {
+  color: #000;
+}
+.md-green-banner a.image-link {
+  display: block;
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.md-green-banner a.image-link img {
+  margin: 0 auto 10px;
+  max-width: 100px;
+}
+@media (max-width: 991px) {
+  .md-green-banner {
+    margin-right: -5px;
+  }
+}
+@media (min-width: 768px) {
+  .md-green-banner a.image-link {
+    max-width: 100px;
+    position: relative;
+    top: -40px;
+    float: right;
+  }
+  .md-green-banner a.image-link img {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .md-green-banner {
+    padding-right: 50px;
+  }
+  .md-green-banner:after {
+    background-color: #000;
+    content: '';
+    position: absolute;
+    z-index: 100;
+    right: -60px;
+    top: -8px;
+    height: 100%;
+    width: 90px;
+    -webkit-transform: rotate(55deg) skew(30deg, 0deg);
+    -ms-transform: rotate(55deg) skewX(30deg) skewY(0deg);
+    transform: rotate(55deg) skew(30deg, 0deg);
+  }
+}
 .home-view {
   padding-bottom: 20px;
   color: #fff;
@@ -10618,6 +10679,7 @@ label.required {
   }
 }
 .sales-doc-panel a {
+  background-color: #111;
   display: block;
 }
 .sales-doc-panel a img {

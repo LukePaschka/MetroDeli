@@ -33,6 +33,12 @@ gallery-list-view {
     letter-spacing: normal;
   }
 }
+.short-gallery-list-view {
+  a {
+    margin-bottom:20px;
+    color: #fff;
+  }
+}
 
 form {
   &[name="addToOrderForm"] {
@@ -100,9 +106,9 @@ shortproductviewminimal {
   & > li {
     &.active {
       & > a {
-        background-color: @md-green;
+        background-color: @md-green !important;
         color:#000;
-        border-color:darken(@md-green, 5);
+        border-color:darken(@md-green, 5) !important;
       }
     }
     &:hover,
@@ -240,5 +246,67 @@ label {
   border-width:0;
   .divider {
     background-color:#333;
+  }
+}
+
+.md-green-banner {
+  position:relative;
+  max-width:885px;
+  margin-left:-5px;
+  min-height:90px;
+  padding:15px;
+  background-color:@md-green;
+  color:#000;
+  font-weight:bold;
+  a {
+    color:#000;
+    &.image-link {
+      display:block;
+      .rotate(8deg);
+      img {
+        margin:0 auto 10px;
+        max-width:100px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: @screen-sm-max) {
+  .md-green-banner {
+    margin-right:-5px;
+  }
+}
+
+@media (min-width:@screen-sm-min) {
+  .md-green-banner {
+    a.image-link {
+      max-width:100px;
+      position:relative;
+      top:-40px;
+      float:right;
+      img {
+        max-width:100%;
+      }
+    }
+  }
+}
+
+@media (min-width:@screen-md-min) {
+  .md-green-banner {
+    padding-right:50px;
+    &:after {
+      background-color:#000;
+      content: '';
+      position: absolute;
+      z-index:100;
+      right:-60px;
+      top:-8px;
+      height:100%;
+      width:90px;
+      -webkit-transform: rotate(55deg) skew(30deg, 0deg);
+      -ms-transform: rotate(55deg) skewX(30deg) skewY(0deg); // IE9 only
+      transform: rotate(55deg) skew(30deg, 0deg);
+    }
   }
 }

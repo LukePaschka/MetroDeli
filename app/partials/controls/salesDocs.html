@@ -10,7 +10,22 @@
             Click on the images to download the PDF.
         </div>
         </br>
-        <div class="row">
+        <div class="row" ng-repeat="documentCategory in DocumentCategories">
+            <div class="container">
+                <h3>{{documentCategory.Name | uppercase}}</h3>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-2" ng-repeat="document in documentCategory.SalesDocuments">
+                <a href="{{'lib/assets/SalesDocuments/' + document.PDF}}" target="_blank">
+                    <figure>
+                        <img class="img-responsive" ng-src="{{'lib/assets/SalesDocuments/' + document.Image}}">
+                    </figure>
+                </a>
+                <div class="caption text-center">
+                    {{document.Name}}
+                </div>
+            </div>
+        </div>
+        <!--<div>
             <div class="col-md-3">
                 <ul>
                     <li ng-repeat="documentCategory in DocumentCategories" ng-click="$parent.activeSalesDocuments = documentCategory.SalesDocuments">
@@ -30,6 +45,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>

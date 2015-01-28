@@ -9,11 +9,9 @@
         <div class="col-md-6" ng-repeat="s in sg.Specs">
             <ul class="list-group" >
                 <li>
-                    <a style="display: block" href="{{s.FileURL}}">
-                        <figure ng-show="s.VisibleToCustomer" >
-                            <img class="image-responsive" style="max-width:100%; height:auto" ng-src="{{s.FileURL}}">
-                        </figure>
-                    </a>
+                    <figure ng-show="s.VisibleToCustomer" >
+                        <img class="image-responsive" style="max-width:100%; height:auto" ng-src="{{s.FileURL}}">
+                    </figure>
                 </li>
             </ul>
         </div>
