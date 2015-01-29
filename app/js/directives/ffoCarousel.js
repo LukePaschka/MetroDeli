@@ -13,6 +13,9 @@ four51.app
     })
     .controller('ffoCarouselCtrl', ['$scope', 'User', function($scope, User){
         $scope.showCarousel = false;
+
+        $scope.hostName = window.location.hostname;
+
         User.get(function(user) {
             $scope.Slides = [];
             angular.forEach(user.CustomFields, function(f) {

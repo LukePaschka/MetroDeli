@@ -10,7 +10,7 @@ As of right now, this is the only way to achieve a fully responsive image carous
     <li ng-repeat="slide in Slides">
         <div class="layer">
             <a target="{{slide.externalLink ? '_blank' : '_self'}}" ng-href="{{slide.linkUrl}}">
-                <div style="background-image:url({{'\'//qastore.four51.com' + slide.imageUrl + '\''}});"></div>
+                <div style="background-image:url({{'\'//' + hostName + slide.imageUrl + '\''}});"></div>
             </a>
         </div>
     </li>
