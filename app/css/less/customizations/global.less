@@ -253,6 +253,7 @@ label {
   position:relative;
   max-width:885px;
   margin-left:-5px;
+  margin-bottom:25px;
   min-height:90px;
   padding:15px;
   background-color:@md-green;
@@ -280,11 +281,15 @@ label {
 
 @media (min-width:@screen-sm-min) {
   .md-green-banner {
+    & > p {
+      max-width:80%;
+      margin:0;
+    }
     a.image-link {
       max-width:100px;
-      position:relative;
-      top:-40px;
-      float:right;
+      position:absolute;
+      top:-20px;
+      right:50px;
       img {
         max-width:100%;
       }
@@ -309,4 +314,11 @@ label {
       transform: rotate(55deg) skew(30deg, 0deg);
     }
   }
+}
+
+.ces-logo {
+  position:absolute;
+  left:10px;
+  top:10px;
+  width:100px;
 }
