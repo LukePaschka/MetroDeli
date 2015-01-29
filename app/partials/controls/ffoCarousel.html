@@ -9,13 +9,9 @@ As of right now, this is the only way to achieve a fully responsive image carous
     <img style="float:left; opacity:0;" ng-src="{{Slides[0].imageUrl}}"/>
     <li ng-repeat="slide in Slides">
         <div class="layer">
-            <a ng-if="slide.linkUrl && slide.externalLink" target="_blank" ng-href="{{slide.linkUrl}}">
-                <img ng-src="{{slide.imageUrl}}" />
+            <a target="{{slide.externalLink ? '_blank' : '_self'}}" ng-href="{{slide.linkUrl}}">
+                <div style="background-image:url({{'\'//qastore.four51.com' + slide.imageUrl + '\''}});"></div>
             </a>
-            <a ng-if="slide.linkUrl && !slide.externalLink" ng-href="{{slide.linkUrl}}">
-                <img ng-src="{{slide.imageUrl}}" />
-            </a>
-            <img ng-if="!slide.linkUrl" ng-src="{{slide.imageUrl}}"/>
         </div>
     </li>
     <div rn-carousel-indicators ng-if="Slides.length > 1 && indicators" slides="Slides" rn-carousel-index="carouselIndex"></div>
@@ -51,8 +47,21 @@ As of right now, this is the only way to achieve a fully responsive image carous
         height: 100%;
         display: inline-block;
     }
+    ul[rn-carousel] > li > div.layer {
+        display:block;
+        position:static;
+    }
     ul[rn-carousel] > li a {
         display:block;
+    }
+    ul[rn-carousel] > li a > div {
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        background-size:contain;
+        background-repeat:no-repeat;
     }
     ul[rn-carousel] img {
         max-height: none;
