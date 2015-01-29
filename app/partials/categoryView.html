@@ -1,4 +1,7 @@
 <section>
+    <div style="margin-bottom:15px;" class="row" ng-show="isActive('catalog') || isInPath('catalog')">
+        <ffo-carousel indicators="true" timeout="5" controls="false"></ffo-carousel>
+    </div>
     <aside class="col-sm-3 col-collapse visible-md visible-lg" ng-if="navStatus.visible && !isActive(['PicGroup','Gallery'])">
         <div class="panel panel-default panel-nav">
             <div class="panel-heading">

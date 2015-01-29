@@ -10607,6 +10607,9 @@ label.required {
   top: 10px;
   width: 100px;
 }
+iframe {
+  max-width: 100%;
+}
 .home-view {
   padding-bottom: 20px;
   color: #fff;
