@@ -5,7 +5,7 @@ This template is a workaround for the carousel not having any height by default 
 As of right now, this is the only way to achieve a fully responsive image carousel.
 
 -->
-<ul rn-carousel rn-carousel-auto-slide="timeout" ng-if="showCarousel" rn-carousel-index="carouselIndex" rn-carousel-controls ng-class="{'hide-controls': !controls}">
+<ul rn-carousel rn-carousel-auto-slide="{{timeout}}" ng-if="showCarousel" rn-carousel-index="carouselIndex" rn-carousel-controls ng-class="{'hide-controls': !controls}">
     <img style="float:left; opacity:0;" ng-src="{{Slides[0].imageUrl}}"/>
     <li ng-repeat="slide in Slides">
         <div class="layer">
