@@ -12,27 +12,6 @@ four51.app
         }
     })
     .controller('ffoCarouselCtrl', ['$scope', 'User', function($scope, User){
-//        local solution
-/*        var path = 'lib/assets/Slides/';
-        $scope.Slides = [
-            {
-                'imageUrl':path + 'banner2.jpg',
-                'linkUrl':null,
-                'externalLink':false
-            },
-            {
-                'imageUrl':path + 'banner3.jpg',
-                'linkUrl':null,
-                'externalLink':false
-            },
-            {
-                'imageUrl':path + 'banner4.jpg',
-                'linkUrl':null,
-                'externalLink':false
-            }
-        ];*/
-
-//        data model solution
         $scope.showCarousel = false;
         User.get(function(user) {
             $scope.Slides = [];
