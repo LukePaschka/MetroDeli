@@ -18,7 +18,7 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, Analytics,
 
     function applyUSFoodsNumber(user, order) {
         var USFoodsNumberField = $filter('getfieldbyname')(user.CustomFields, 'USFoodsCustomerNumberUser');
-        if (USFoodsNumberField.Value) {
+        if (USFoodsNumberField && USFoodsNumberField.Value) {
             angular.forEach(order.OrderFields, function(field) {
                 if (field.Name == 'USFoodsCustomerNumberOrder') {
                     field.Value = USFoodsNumberField.Value;
