@@ -15,6 +15,10 @@
         <span class="text-info">{{'Created By' | r}}</span>
         <span class="pull-right">{{order.FromUserFirstName + ' ' + order.FromUserLastName}}</span>
     </p>
+    <p ng-repeat="field in order.OrderFields | customfields:'USFoodsCustomerNumberOrder':'only'" ng-if="field.Value">
+        <span class="text-info">{{field.Label}}</span>
+        <span class="pull-right">{{field.Value}}</span>
+    </p>
     <p ng-show="order.Comments">
         <span class="text-info">{{'Comments' | r | xlat}}</span>
         <span class="pull-right">{{order.Comments}}</span>
