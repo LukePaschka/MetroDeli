@@ -176,27 +176,33 @@ shortproductviewminimal {
       border-top:1px solid @md-green;
     }
     font-family: @pathway-gothic-one;
+    font-size:2.2em;
     cursor: pointer;
     text-align:center;
     margin-top:0;
     margin-bottom:0;
-    padding:15px 5px 1px;
+    padding:20px 10px;
     .transition(all 200ms ease-in-out);
-    p {
-      margin-top:10px;
-      margin-bottom:0;
-      padding-bottom:10px;
-      font-family:@font-family-sans-serif;
-      font-size:0.5em;
-      color:@md-green;
+    .flex-display(flex);
+    .flex-wrap(nowrap);
+    .flex-direction(column);
+    @media(min-width: @screen-sm-min) {
+      .flex-direction(row);
     }
-    i {
-      margin-right:5px;
+    i,
+    div {
+      .flex(1);
+      @media(max-width:@screen-xs-max) {
+        text-align:center;
+        &:not(:last-child){
+          padding-bottom:2px;
+        }
+      }
     }
     &.open {
       color:#000;
       background-color:@md-green;
-      p,
+      div,
       i{
         color:#000;
       }

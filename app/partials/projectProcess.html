@@ -16,7 +16,11 @@
         <h3 class='panel-title'>Project Request Process</h3>
     </div>
     <div class="panel-body project-process">
-        <h3 ng-click="toggleStep(1)" ng-class="{open: processStep == 1}"><i class="fa fa-edit"></i> Step 1<p>Project Request</p></h3>
+        <h3 ng-click="toggleStep(1)" ng-class="{open: processStep == 1}">
+            <div class="text-left">Step 1</div>
+            <i class="fa fa-edit"></i>
+            <div class="text-right">Project Request</div>
+        </h3>
         <div collapse="processStep != 1">
             <div class="row">
                 <div class="col-sm-8 col-md-9">
@@ -34,7 +38,11 @@
                 </div>
             </div>
         </div>
-        <h3 ng-click="toggleStep(2)" ng-class="{open: processStep == 2}"><i class="fa fa-calculator"></i> Step 2<p>Estimate</p></h3>
+        <h3 ng-click="toggleStep(2)" ng-class="{open: processStep == 2}">
+            <div class="text-left">Step 2</div>
+            <i class="fa fa-calculator"></i>
+            <div class="text-right">Estimate</div>
+        </h3>
         <div collapse="processStep != 2">
             <div class="row">
 
@@ -51,7 +59,11 @@
                 </div>
             </div>
         </div>
-        <h3 ng-click="toggleStep(3)" ng-class="{open: processStep == 3}"><i class="fa fa-check-square"></i> Step 3<p>Approval to Proceed with Design</p></h3>
+        <h3 ng-click="toggleStep(3)" ng-class="{open: processStep == 3}">
+            <div class="text-left">Step 3</div>
+            <i class="fa fa-check-square"></i>
+            <div class="text-right">Design Approval</div>
+        </h3>
         <div collapse="processStep != 3">
             <div class="row">
                 <div class="col-sm-8 col-md-9">
@@ -67,7 +79,11 @@
                 </div>
             </div>
         </div>
-        <h3 ng-click="toggleStep(4)" ng-class="{open: processStep == 4}"><i class="fa fa-cogs"></i> Step 4<p>Design/Install</p></h3>
+        <h3 ng-click="toggleStep(4)" ng-class="{open: processStep == 4}">
+            <div class="text-left">Step 4</div>
+            <i class="fa fa-cogs"></i>
+            <div class="text-right">Design/Install</div>
+        </h3>
         <div collapse="processStep != 4">
             <div class="row">
                 <div class="col-sm-8 col-md-9">
@@ -85,7 +101,11 @@
                 </div>
             </div>
         </div>
-        <h3 ng-click="toggleStep(5)" ng-class="{open: processStep == 5}"><i class="fa fa-print"></i> Step 5<p>Print</p></h3>
+        <h3 ng-click="toggleStep(5)" ng-class="{open: processStep == 5}">
+            <div class="text-left">Step 5</div>
+            <i class="fa fa-print"></i>
+            <div class="text-right">Print</div>
+        </h3>
         <div collapse="processStep != 5">
             <div class="row">
                 <div class="col-sm-8 col-md-9">
@@ -100,7 +120,11 @@
                 </div>
             </div>
         </div>
-        <h3 ng-click="toggleStep(6)" ng-class="{open: processStep == 6}"><i class="fa fa-wrench"></i> Step 6<p>Install</p></h3>
+        <h3 ng-click="toggleStep(6)" ng-class="{open: processStep == 6}">
+            <div class="text-left">Step 6</div>
+            <i class="fa fa-wrench"></i>
+            <div class="text-right">Install</div>
+        </h3>
         <div collapse="processStep != 6">
             <div class="row">
                 <div class="col-sm-8 col-md-9">
