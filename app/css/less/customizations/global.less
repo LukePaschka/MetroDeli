@@ -323,7 +323,15 @@ label {
 }
 
 .ces-logo {
+  @media(min-width:@screen-md-min) {
+    float:left;
+  }
   padding:10px;
+  max-width:150px;
+  img {
+    margin:0 auto;
+    max-width: 100%;
+  }
 }
 
 iframe {

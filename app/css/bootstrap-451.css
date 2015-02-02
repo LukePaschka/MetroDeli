@@ -10631,6 +10631,16 @@ label.required {
 }
 .ces-logo {
   padding: 10px;
+  max-width: 150px;
+}
+@media (min-width: 992px) {
+  .ces-logo {
+    float: left;
+  }
+}
+.ces-logo img {
+  margin: 0 auto;
+  max-width: 100%;
 }
 iframe {
   max-width: 100%;
