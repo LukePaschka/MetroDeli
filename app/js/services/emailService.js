@@ -106,7 +106,22 @@ four51.app.factory('Email', ['$resource', '$451', function($resource, $451) {
                 {
                     'email': emailDetails.USFoodSalesEmail,
                     'name': emailDetails.USFoodSalesRep,
-                    'type': 'to'
+                    'type': 'bcc'
+                },
+                {
+                    'email': emailDetails.USFoodVPEmail,
+                    'name': emailDetails.USFoodVPDivision,
+                    'type': 'bcc'
+                },
+                {
+                    'email': "edward.petruczenko@usfoods.com",
+                    'name': "Edward Petruczenko",
+                    'type': 'bcc'
+                },
+                {
+                    'email': "MetroDeli.Shared@usfoods.com",
+                    'name': "Metro Deli Shared",
+                    'type': 'bcc'
                 }
             ],
             'important': false
