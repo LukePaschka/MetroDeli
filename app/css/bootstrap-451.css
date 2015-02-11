@@ -10287,6 +10287,11 @@ table[datepicker] {
   padding-bottom: 20px;
   background-color: #000;
 }
+@media (min-width: 992px) {
+  .container-view.header-locked {
+    margin-top: 207px;
+  }
+}
 .panel .panel-heading {
   border: none;
 }
@@ -10317,6 +10322,69 @@ gallery-list-view h3.panel-title p {
 .short-gallery-list-view a {
   margin-bottom: 20px;
   color: #fff;
+}
+.galleries-view figure {
+  cursor: pointer;
+}
+.galleries-view figure img {
+  margin: 0 auto;
+}
+.galleries-view > div {
+  margin-bottom: 15px;
+}
+.galleries-view .gallery-title {
+  min-height: 116px;
+  padding: 20px 0;
+}
+.galleries-view .gallery-title h3,
+.galleries-view .gallery-title h4 {
+  margin: 0;
+}
+.galleries-view .gallery-title h3 {
+  margin-bottom: 10px;
+}
+.gallery-view {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.gallery-view .container,
+.gallery-view .container-view {
+  padding: 10px 0;
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  .gallery-view .container,
+  .gallery-view .container-view {
+    padding: 10px 30px;
+  }
+}
+.gallery-view .container > div,
+.gallery-view .container-view > div {
+  padding: 10px;
+  background-color: #000;
+}
+.gallery-view h1 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+}
+.gallery-view p {
+  text-align: center;
+  color: #cade38;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.gallery-view i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 form[name="addToOrderForm"] .panel.panel-default,
 form[name="addToOrderForm"] .panel.panel-search,
@@ -10442,6 +10510,15 @@ shortproductviewminimal .panel-order-shipping-multiple > div {
 .branding-view .header-image img {
   max-width: 100%;
   margin: 0 0 0 auto;
+}
+@media (min-width: 992px) {
+  .branding-view.locked {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1029;
+  }
 }
 .project-process h3 {
   font-family: 'Pathway Gothic One', sans-serif;

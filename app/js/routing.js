@@ -47,5 +47,6 @@ four51.app.config(['$routeProvider', '$locationProvider', function($routeProvide
 		when('/home', { templateUrl: 'partials/Messages/home.html' }).
         when('/sales', { templateUrl: 'partials/controls/salesDocs.html', controller: 'SalesDocsCtrl' }).
 		when('/equipment', { templateUrl: 'partials/equipment.html' }).
+		when('/gallery', { templateUrl: 'partials/galleryView.html', controller: 'GalleryViewCtrl'}).
 		otherwise({redirectTo: '/home'});
 }]);

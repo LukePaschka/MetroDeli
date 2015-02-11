@@ -1,5 +1,5 @@
 <div class="row project-request" ng-controller="ProjectRequestCtrl">
-    <div class="col-sm-6 col-md-7">
+    <div class="col-sm-7">
         <form name="email_Send" novalidate="">
             <div class="panel panel-default" style="font-size:1.3em;">
                 <div class="panel-heading">
@@ -103,12 +103,134 @@
             </div>
         </form>
     </div>
-    <div class="col-sm-6 col-md-5 hidden-xs">
-        <figure style="padding:100px 20px 20px">
-            <img style="margin:0 auto; max-width:100%;" src="css/images/projectrequest.jpg"/>
-        </figure>
+    <div class="col-sm-5 hidden-xs" style="padding-right:20px;">
+        <ul rn-carousel rn-carousel-auto-slide="5">
+            <img style="float:left; opacity:0;" ng-src="css/images/ProjectRequestImages/slide1.png"/>
+            <li>
+                <div class="layer">
+                    <div style="background-image:url('css/images/ProjectRequestImages/slide1.png');"></div>
+                </div>
+            </li><li>
+                <div class="layer">
+                    <div style="background-image:url('css/images/ProjectRequestImages/slide2.png');"></div>
+                </div>
+            </li><li>
+                <div class="layer">
+                    <div style="background-image:url('css/images/ProjectRequestImages/slide3.png');"></div>
+                </div>
+            </li><li>
+                <div class="layer">
+                    <div style="background-image:url('css/images/ProjectRequestImages/slide4.png');"></div>
+                </div>
+            </li>
+        </ul>
     </div>
-    <!-- ORDER PANEL! -->
-
-
+    <style>
+        ul[rn-carousel] {
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0;
+            white-space: nowrap;
+            position: relative;
+            -webkit-perspective: 1000px;
+            -ms-perspective: 1000px;
+            perspective: 1000px;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        }
+        ul[rn-carousel] > li {
+            color: black;
+            -webkit-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: visible;
+            vertical-align: top;
+            position: absolute;
+            left: 0;
+            right: 0;
+            white-space: normal;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        ul[rn-carousel] > li > div.layer {
+            display:block;
+            position:static;
+        }
+        ul[rn-carousel] > li > div.layer > div {
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position: center center;
+        }
+        ul[rn-carousel] img {
+            max-height: none;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        /* prevent flickering when moving buffer */
+        ul[rn-carousel-buffered] > li {
+            display: none;
+        }
+        ul[rn-carousel-transition="hexagon"] {
+            overflow: visible;
+        }
+        /* indicators */
+        div[rn-carousel-indicators] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 15px;
+            text-align: center;
+        }
+        div.rn-carousel-indicator span {
+            display: inline;
+            cursor: pointer;
+            color: #666;
+        }
+        div.rn-carousel-indicator span.active {
+            color: white;
+        }
+        /* prev/next controls */
+        ul[rn-carousel].hide-controls > .rn-carousel-controls {
+            display:none;
+        }
+        .rn-carousel-controls {
+            position:absolute;
+            left:0;
+            right:0;
+            top: 40%;
+        }
+        .rn-carousel-control {
+            font-family: FontAwesome;
+            -webkit-transition: opacity 0.2s ease-out;
+            transition: opacity 0.2s ease-out;
+            font-size: 2rem;
+            position: absolute;
+            opacity: 0.75;
+            cursor: pointer;
+        }
+        .rn-carousel-control:hover {
+            opacity: 1;
+        }
+        .rn-carousel-control.rn-carousel-control-prev {
+            left: 0.5em;
+        }
+        .rn-carousel-control.rn-carousel-control-prev:before {
+            content: "\f060";
+        }
+        .rn-carousel-control.rn-carousel-control-next {
+            right: 0.5em;
+        }
+        .rn-carousel-control.rn-carousel-control-next:before {
+            content: "\f061";
+        }
+    </style>
 </div>

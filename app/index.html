@@ -26,7 +26,7 @@
         <section class="hidden-print">
             <branding />
         </section>
-        <section class="container-view">
+        <section class="container-view" ng-class="{'header-locked':lockHeader}">
             <ng-view autoscroll />
         </section>
         <section class="hidden-print">
@@ -110,6 +110,7 @@
 <script src="js/controllers/orderTypeSelectorCtrl.js" data-group="source"></script>
 <script src="js/controllers/reportViewCtrl.js" data-group="source"></script>
 <script src="js/controllers/salesDocsCtrl.js" data-group="source"></script>
+<script src="js/controllers/galleryViewCtrl.js" data-group="source"></script>
 
 
 <script src="js/interceptors.js" data-group="source"></script>

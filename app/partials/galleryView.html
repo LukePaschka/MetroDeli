@@ -1,0 +1,28 @@
+<div class="galleries-view row">
+    <div class="col-sm-4 col-md-3" ng-repeat="gallery in Galleries">
+        <figure ng-click="openGallery(gallery)">
+            <img class="img-responsive" ng-src="{{gallery.ThumbUrl}}"/>
+        </figure>
+        <div class="gallery-title">
+            <h3 style="min-height: 0px; font-weight: bold;" class="text-center">{{gallery.Location}}</h3>
+            <h4 class="text-center">{{gallery.Name}}</h4>
+        </div>
+    </div>
+</div>
+
+<div class="gallery-view" ng-show="GalleryVisible && ActiveGallery.Images">
+    <div class="container">
+        <div>
+            <i class="fa fa-times fa-3x" ng-click="closeGallery()"></i>
+            <h1>Gallery</h1>
+            <p>{{ActiveGallery.Description}}</p>
+            <div class="row">
+                <div class="col-sm-6" ng-repeat="image in ActiveGallery.Images">
+                    <figure>
+                        <img class="img-responsive" ng-src="{{image}}"/>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,9 +14,8 @@
         </div>
         <ul>
             <li class="inline minimal" id="451_lst_prod" ng-repeat="product in products | paginate:(settings.currentPage-1) * settings.pageSize | limitTo:settings.pageSize | orderBy:'Name' | orderBy:sorter:direction">
-                <div ng-class="{'well': !isInPath(['PicGroup', 'Gallery'])}">
-                    <shortproductviewminimal ng-show="!isInPath(['PicGroup', 'Gallery'])" p="product" user="user" />
-                    <short-gallery-view-minimal ng-show="isInPath(['PicGroup', 'Gallery'])" p="product" user="user" />
+                <div class="well">
+                    <shortproductviewminimal p="product" user="user" />
                 </div>
             </li>
         </ul>
