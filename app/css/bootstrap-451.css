@@ -10386,6 +10386,9 @@ gallery-list-view h3.panel-title p {
   top: 10px;
   cursor: pointer;
 }
+.gallery-view figure {
+  margin-bottom: 10px;
+}
 form[name="addToOrderForm"] .panel.panel-default,
 form[name="addToOrderForm"] .panel.panel-search,
 form[name="addToOrderForm"] .panel.panel-category-list ul li a .empty,
