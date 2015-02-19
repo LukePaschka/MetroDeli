@@ -88,7 +88,7 @@ function ($window, $scope, $route, $location, $451, User, Order, Security, Order
 
     $scope.lockHeader = false;
     angular.element($window).bind("scroll", function(e) {
-        $scope.lockHeader = e.view.scrollY > 60;
+        $scope.lockHeader = (e && e.view) ? (e.view.scrollY > 60) : null;
         $scope.$apply();
     });
 }]);
