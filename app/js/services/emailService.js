@@ -28,115 +28,127 @@
 //This example is called from a controller and does not have a "success" function. If you wanted to do so in order to display some message to the user that the email was successful, add a
 //success parameter in which you pass your success function. Within that function, you can adjust $scope variables accordingly depending on the Mandrill result.
 
-four51.app.factory('Email', ['$resource', '$451', function($resource, $451) {
 
-    var _send = function(emailDetails) {
-        var mandrillAPIKey = "yxXstKS79IEpYPOOOq3R1w"; //Enter your API key here
-        mandrill_client = new mandrill.Mandrill(mandrillAPIKey);
+angular.module('OrderCloud-Mandrill', []);
 
-        var template_name = "metro-deli-template"; //Enter Mandrill Template Slug Here
+angular.module('OrderCloud-Mandrill')
 
-        var template_content = [
-            {
-                "name": 'SiteName',
-                "content": emailDetails.SiteName
-            },
-            {
-                "name": 'USFoodsCustNum',
-                "content": emailDetails.USFoodsNum
-            },
-            {
-                "name": 'Division',
-                "content": emailDetails.Division
-            },
-            {
-                "name": 'SiteAddress',
-                "content": emailDetails.SiteAddress
-            },
-            {
-                "name": 'SiteContName',
-                "content": emailDetails.SiteContName
-            },
-            {
-                "name": 'SiteContEmail',
-                "content": emailDetails.SiteEmail
-            },
-            {
-                "name": 'SitePhone',
-                "content": emailDetails.SitePhone
-            },
-            {
-                "name": 'USFoodSalesRep',
-                "content": emailDetails.USFoodSalesRep
-            },
-            {
-                "name": 'USFoodSalesEmail',
-                "content": emailDetails.USFoodSalesEmail
-            },
-            {
-                "name": 'USFoodSalesPhone',
-                "content": emailDetails.USFoodSalesPhone
-            },
-            {
-                "name": 'USFoodVPDivision',
-                "content": emailDetails.USFoodVPDivision
-            },
-            {
-                "name": 'USFoodVPEmail',
-                "content": emailDetails.USFoodVPEmail
-            },
-            {
-                "name": 'SurveyTargetDate',
-                "content": emailDetails.ServeyDate
-            },
-            {
-                "name": 'InstallTargetDate',
-                "content": emailDetails.InstallDate
-            },
-            {
-                "name": 'AdditionalComments',
-                "content": emailDetails.AdditionalComments
-            }
-        ];
-        var message = {
-            'subject': "Project Request",
-            'from_email': emailDetails.SiteEmail,
-            'from_name': emailDetails.SiteName,
-            'to': [
-                {
-                    'email': emailDetails.USFoodSalesEmail,
-                    'name': emailDetails.USFoodSalesRep,
-                    'type': 'bcc'
-                },
-                {
-                    'email': emailDetails.USFoodVPEmail,
-                    'name': emailDetails.USFoodVPDivision,
-                    'type': 'bcc'
-                },
-                {
-                    'email': "edward.petruczenko@usfoods.com",
-                    'name': "Edward Petruczenko",
-                    'type': 'bcc'
-                },
-                {
-                    'email': "MetroDeli.Shared@usfoods.com",
-                    'name': "Metro Deli Shared",
-                    'type': 'bcc'
-                }
-            ],
-            'important': false
+    .factory('Email', Email);
+
+    function Email() {
+        return {
+            send: send
         };
-        var async = false;
-        var ip_pool = "Main Pool";
 
-        mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content, "message": message, "async": async, "ip_pool": ip_pool}, function(result) {
-            console.log(result);
-        }, function(e) {
-            console.log('A Mandrill error occurred: ' + e.name + ' - ' + e.message);
-        });
-    };
+        function send(emailDetails) {
+            var mandrillAPIKey = "Y9UPk4GMJG6527IhheEzdg"; //Enter your API key here
+            var mandrill_client = new mandrill.Mandrill(mandrillAPIKey);
 
-    return {
-        send: _send
+            var template_name = "metro-deli-project-request-template"; //Enter Mandrill Template Slug Here
+
+            var template_content = [
+                {
+                    "name": 'SiteName',
+                    "content": emailDetails.SiteName
+                },
+                {
+                    "name": 'USFoodsCustNum',
+                    "content": emailDetails.USFoodsNum
+                },
+                {
+                    "name": 'Division',
+                    "content": emailDetails.Division
+                },
+                {
+                    "name": 'SiteAddress',
+                    "content": emailDetails.SiteAddress
+                },
+                {
+                    "name": 'SiteContName',
+                    "content": emailDetails.SiteContName
+                },
+                {
+                    "name": 'SiteContEmail',
+                    "content": emailDetails.SiteEmail
+                },
+                {
+                    "name": 'SitePhone',
+                    "content": emailDetails.SitePhone
+                },
+                {
+                    "name": 'USFoodSalesRep',
+                    "content": emailDetails.USFoodSalesRep
+                },
+                {
+                    "name": 'USFoodSalesEmail',
+                    "content": emailDetails.USFoodSalesEmail
+                },
+                {
+                    "name": 'USFoodSalesPhone',
+                    "content": emailDetails.USFoodSalesPhone
+                },
+                {
+                    "name": 'USFoodVPDivision',
+                    "content": emailDetails.USFoodVPDivision
+                },
+                {
+                    "name": 'USFoodVPEmail',
+                    "content": emailDetails.USFoodVPEmail
+                },
+                {
+                    "name": 'SurveyTargetDate',
+                    "content": emailDetails.SurveyDate
+                },
+                {
+                    "name": 'InstallTargetDate',
+                    "content": emailDetails.InstallDate
+                },
+                {
+                    "name": 'AdditionalComments',
+                    "content": emailDetails.AdditionalComments
+                }
+            ];
+            var message = {
+                'subject': "Project Request",
+                'from_email': emailDetails.SiteEmail,
+                'from_name': emailDetails.SiteName,
+                'to': [
+                    {
+                        'email': emailDetails.USFoodSalesEmail,
+                        'name': emailDetails.USFoodSalesRep,
+                        'type': 'bcc'
+                    },
+                    {
+                        'email': emailDetails.USFoodVPEmail,
+                        'name': emailDetails.USFoodVPDivision,
+                        'type': 'bcc'
+                    },
+                    {
+                        'email': "edward.petruczenko@usfoods.com",
+                        'name': "Edward Petruczenko",
+                        'type': 'bcc'
+                    },
+                    {
+                        'email': "MetroDeli.Shared@usfoods.com",
+                        'name': "Metro Deli Shared",
+                        'type': 'bcc'
+                    }
+                ],
+                'important': false
+            };
+            var async = false;
+            var ip_pool = "Main Pool";
+
+            mandrill_client.messages.sendTemplate({
+                "template_name": template_name,
+                "template_content": template_content,
+                "message": message,
+                "async": async,
+                "ip_pool": ip_pool
+            }, function (result) {
+                console.log(result);
+            }, function (e) {
+                console.log('A Mandrill error occurred: ' + e.name + ' - ' + e.message);
+            });
+        }
     }
-}]);
