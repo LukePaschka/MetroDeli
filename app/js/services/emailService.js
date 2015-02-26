@@ -129,7 +129,7 @@ angular.module('OrderCloud-Mandrill')
                         'type': 'bcc'
                     },
                     {
-                        'email': "MetroDeli.Shared@usfoods.com",
+                        'email': "MetroDeli@supplylogic.com",
                         'name': "Metro Deli Shared",
                         'type': 'bcc'
                     }
