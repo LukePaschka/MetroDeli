@@ -5,7 +5,6 @@ four51.app.controller('SalesDocsCtrl', ['$scope', '$routeParams', '$451', functi
                 SalesDocuments: [
                     {Name: "2014 Metro Deli Brochure", Image: "MDBrochure2014.jpg", PDF: "MDBrochure2014.pdf"},
                     {Name: "2014 Metro Deli Nutrition Guide", Image: "MDeliNutritionBook.jpg", PDF: "MDeliNutritionBook.pdf"},
-                    {Name: "Concept Brochure", Image: "MDConceptBrochure.png", PDF: "MDConceptBrochurer1.pdf"}
                 ]
             },
             {
