@@ -124,8 +124,8 @@ angular.module('OrderCloud-Mandrill')
                         'type': 'bcc'
                     },
                     {
-                        'email': "edward.petruczenko@usfoods.com",
-                        'name': "Edward Petruczenko",
+                        'email': "MetroDeli.Shared@usfoods.com",
+                        'name': "Metro Deli Shared",
                         'type': 'bcc'
                     },
                     {
